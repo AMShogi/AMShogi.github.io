@@ -1,0 +1,1 @@
+# AMShogi.github.io
