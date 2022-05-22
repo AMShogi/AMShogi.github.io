@@ -1,1 +1,1 @@
-# AMShogi.github.io
+# Asociación Mexicana de Shogi
