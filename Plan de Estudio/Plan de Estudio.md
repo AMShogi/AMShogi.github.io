@@ -50,11 +50,6 @@ Jugar contra personas:
   - La pieza que da jaque no puede ser bloqueada o capturada.
 - Tsume: serie de jaques que terminan en mate.
   - Los acertijos de tsume es la forma más rápida de mejorar en shogi.
-- [Los mejores tsumes](https://docs.google.com/document/d/18E4_AAVI0w_-VqvVom5EVYNcxDBKzE-x-Z69R2ZUTh4)
-  - Resuelve 1ro los 1te (acertijos de 1 movimiento).
-  - Celular: app [ShogiDroid](http://shogidroid.siganus.com/)
-    - Desliza la orilla izquierda hacia el centro para accesar los settings.
-    - Settings &gt; Appearance y quita Show Next Move Arrow
 
 **Hisshi:**
 
