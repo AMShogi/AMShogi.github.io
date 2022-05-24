@@ -1,3 +1,4 @@
 # Asociación Mexicana de Shogi
 
-* [Plan de Estudio](Plan de Estudio/Plan de Estudio.md)
+## [Miembros AMS](Miembros/Miembros AMS.htm)
+## [Plan de Estudio](Plan de Estudio/Plan de Estudio.md)
