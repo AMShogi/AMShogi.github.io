@@ -54,7 +54,7 @@ Jugar contra personas:
   - Resuelve 1ro los 1te (acertijos de 1 movimiento).
   - Celular: app [ShogiDroid](http://shogidroid.siganus.com/)
     - Desliza la orilla izquierda hacia el centro para accesar los settings.
-    - Settings \&gt; Appearance y quita Show Next Move Arrow
+    - Settings &gt; Appearance y quita Show Next Move Arrow
 
 **Hisshi:**
 
