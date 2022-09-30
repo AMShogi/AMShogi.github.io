@@ -1,5 +1,18 @@
 li {margin: 10px 0;}
 
+.navbar {
+overflow: hidden;
+background-color: black;
+}
+
+.navbar a {
+float: left;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
 .dropbtn {
   background-color: green;
   color: white;
@@ -9,8 +22,8 @@ li {margin: 10px 0;}
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  float: left;
+overflow: hidden;
 }
 
 .dropdown-content {
