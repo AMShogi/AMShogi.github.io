@@ -27,7 +27,7 @@ margin: 0;
 overflow: hidden;
 }
 
-.navbar a:hover, .dropdown:hover 
+.navbar a:hover, .dropdown:hover .dropbtn {background-color: red;}
 
 .dropdown-content {
   display: none;
@@ -38,13 +38,14 @@ overflow: hidden;
 }
 
 .dropdown-content a {
+float: none;
   color: black;
   padding: 12px 16px;
+text-decoration: none;
   display: block;
+text-align: left;
 }
 
 .dropdown-content a:hover {background-color: white;}
 
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: green;}
+.dropdown:hover .dropdown-content {display: block}
