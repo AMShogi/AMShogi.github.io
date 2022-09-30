@@ -31,4 +31,4 @@ display: block;
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color:green;}
+.dropdown:hover .dropbtn {background-color: green;}
