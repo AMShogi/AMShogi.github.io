@@ -37,6 +37,7 @@ li {margin: 10px 0;}
     background-color: white;
     min-width: 160px;
     z-index: 1;
+    border: 1px solid black
 }
 
 .dropdown-content a {
