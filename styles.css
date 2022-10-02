@@ -8,6 +8,14 @@ body {
     color: white;
 }
 
+#box {
+    padding: 1px;
+    left: 1;
+    right: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
 .navbar {
     overflow: hidden;
     background-color: green;
