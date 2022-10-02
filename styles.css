@@ -7,7 +7,7 @@ li {margin: 10px 0;}
 
 .navbar a {
     float: left;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -23,7 +23,8 @@ li {margin: 10px 0;}
     background-color: green;
     color: white;
     padding: 14px 16px;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: inherent;
     border: none;
     margin: 0;
     outline: none;
@@ -32,6 +33,7 @@ li {margin: 10px 0;}
 .navbar a:hover, .dropdown:hover .dropbtn {background-color: red;}
 
 .dropdown-content {
+    font-size: 18px;
     display: none;
     position: absolute;
     background-color: white;
@@ -55,13 +57,6 @@ li {margin: 10px 0;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.footer a:link {
-    font-size: 16px;
-    color: white
-}
-.footer a:visited {color: white;}
-
-
 .footer {
     position: fixed;
     left: 0;
@@ -70,3 +65,8 @@ li {margin: 10px 0;}
     background-color: rgba(255, 0, 0, 0.6);
     color: white;
 }
+.footer a:link {
+    font-size: 16px;
+    color: white
+}
+.footer a:visited {color: white;}
