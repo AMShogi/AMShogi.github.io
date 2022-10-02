@@ -10,8 +10,8 @@ body {
 
 #box {
     padding: 1px;
-    left: 1;
-    right: 1;
+    width: 75%;
+    margin-left: 10%;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
 }
