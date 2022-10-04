@@ -86,6 +86,6 @@ body {
 .footer li {margin: 10px 0;}
 .footer a:link {
     font-size: 16px;
-    color: white
+    color: white;
 }
 .footer a:visited {color: white;}
