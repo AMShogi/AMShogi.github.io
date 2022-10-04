@@ -22,9 +22,8 @@ a:visited {color: white;}
 .dropdown-content {
 position: absolute;
 display: none;
-color: white;
 }
 
-.dropdown dropdown-content: hover, click {
-block: display;
+.dropdown:hover, click dropdown-content {
+display: block;
 }
