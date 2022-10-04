@@ -29,10 +29,11 @@ position: absolute;
 display: none;
 }
 
-.dropdown-content a {
+.dropdown-content p {
 display: block;
 background-color: white;
 color: black;
+margin: 0;
 }
 
 .dropdown:hover .dropdown-content {
