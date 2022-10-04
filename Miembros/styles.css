@@ -19,6 +19,11 @@ background-color: green;
 a:link {color: white;}
 a:visited {color: white;}
 
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
 .dropdown-content {
 position: absolute;
 display: none;
@@ -29,6 +34,6 @@ display: block;
 }
 
 
-.dropdown:hover dropdown-content {
+.dropdown:hover .dropdown-content {
 display: block;
 }
