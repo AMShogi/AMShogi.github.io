@@ -20,6 +20,8 @@ background-color: green;
 a:link {color: white;}
 a:visited {color: white;}
 
+.dropbtn {z-index: 0;}
+
 .dropdown {
 position: relative;
 display: inline-block;
