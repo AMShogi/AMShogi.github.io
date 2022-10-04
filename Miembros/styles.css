@@ -35,6 +35,7 @@ background-color: white;
 color: black;
 margin: 0;
 border: 1px solid black;
+white-space: nowrap;
 }
 
 .dropdown:hover .dropdown-content {
