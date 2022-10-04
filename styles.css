@@ -6,14 +6,6 @@ body {
     background-size: cover;
 }
 
-#centerBox {
-    padding: 1px;
-    /* width: 75%;
-    margin-left: 10%; */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
 .navbar {
     overflow: hidden;
     background-color: green;
@@ -58,11 +50,11 @@ body {
 
 .dropdown-content a {
     float: none;
-    color: black;
+    background-color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
 }
 
 .dropdown-content a:hover {
@@ -70,6 +62,14 @@ body {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+
+#centerBox {
+    padding: 1px;
+    /* width: 75%;
+    margin-left: 10%; */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
 
 .footer {
     position: fixed;
