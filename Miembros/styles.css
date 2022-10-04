@@ -6,16 +6,13 @@ color: white;
 table {
 border-collapse: collapse;
 width: 100%;
-}
-
-th, td {
-border: 1px solid white;
 text-align: center;
 }
+
+th, td {border: 1px solid white;}
 
 tr:nth-child(even) {
 border: 1px solid white;
-text-align: center;
 background-color: green;
 }
 
