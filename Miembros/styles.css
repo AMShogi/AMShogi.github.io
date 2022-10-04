@@ -18,3 +18,13 @@ background-color: green;
 
 a:link {color: white;}
 a:visited {color: white;}
+
+.dropdown-content {
+position: absolute;
+display: none;
+color: white;
+}
+
+.dropdown dropdown-content: hover, click {
+block: display;
+}
