@@ -38,6 +38,7 @@ color: white;
 margin: 0;
 border: 1px solid white;
 white-space: nowrap;
+z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
