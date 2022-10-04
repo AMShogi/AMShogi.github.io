@@ -8,17 +8,12 @@ border-collapse: collapse;
 width: 100%;
 }
 
-th {
-border: 1px solid white;
+th, td {
 text-align: center;
 }
 
-td {
-border: 1px solid black;
-}
-
 tr:nth-child(even) {
-border: 1px solid black;
+text-align: center;
 background-color: green;
 }
 
