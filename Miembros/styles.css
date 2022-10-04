@@ -29,7 +29,7 @@ position: absolute;
 display: none;
 }
 
-.dropdown-content p {
+.dropdown-content a {
 display: block;
 background-color: white;
 color: black;
