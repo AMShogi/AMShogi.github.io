@@ -24,6 +24,11 @@ position: absolute;
 display: none;
 }
 
+. dropdown-content p {
+display: block;
+}
+
+
 .dropdown:hover, click dropdown-content {
 display: block;
 }
