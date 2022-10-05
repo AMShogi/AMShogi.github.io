@@ -42,10 +42,8 @@ body {
     font-size: 18px;
     display: none;
     position: absolute;
-    background-color: white;
     min-width: 160px;
     z-index: 1;
-    border: 1px solid black;
 }
 
 .dropdown-content a {
