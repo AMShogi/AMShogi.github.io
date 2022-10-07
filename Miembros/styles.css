@@ -1,13 +1,13 @@
 body {
 background-color: black;
 color: white;
+white-space: nowrap;
 }
 
 table {
 border-collapse: collapse;
 text-align: center;
 width: 100%;
-white-space: nowrap;
 }
 
 th, td {border: 1px solid white;}
@@ -37,7 +37,6 @@ background-color: black;
 color: white;
 margin: 0;
 border: 1px solid white;
-white-space: nowrap;
 }
 
 .dropdown:hover .dropdown-content {
