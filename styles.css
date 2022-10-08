@@ -16,7 +16,7 @@ body {
     font-size: 18px;
     color: white;
     text-align: center;
-    padding: 12px 14px;
+    padding: 12px 12px;
     text-decoration: none;
 }
 
@@ -28,7 +28,7 @@ body {
 .dropdown .dropbtn {
     background-color: green;
     color: white;
-    padding: 12px 14px;
+    padding: 10px 10px;
     font-size: 18px;
     font-family: inherent;
     border: none;
@@ -83,8 +83,5 @@ body {
     line-height: 1px;
 }
 .footer li {margin: 10px 0;}
-.footer a:link {
-    font-size: 16px;
-    color: white;
-}
+.footer a:link {color: white;}
 .footer a:visited {color: white;}
