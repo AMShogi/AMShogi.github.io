@@ -17,8 +17,11 @@ border: 1px solid white;
 background-color: green;
 }
 
-a:link {color: white;}
-a:visited {color: white;}
+a:link, a:visited  {
+    color: white;
+    text-decoration: none
+}
+a:hover {color: red;}
 
 .dropdown {
 position: relative;
