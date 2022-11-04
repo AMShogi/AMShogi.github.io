@@ -69,6 +69,12 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
+#centerBox a:visited {color: white;}
+#centerBox li {margin: 10px 0;}
+#centerBox h3 {
+    line-height: 0px;
+    text-indent: 10px;
+}
 
 .footer {
     position: fixed;
@@ -80,7 +86,7 @@ body {
 }
 .footer h3 {
     text-indent: 10px;
-    line-height: 1px;
+    line-height: 0px;
 }
 .footer li {margin: 10px 0;}
 .footer a:link {color: white;}
