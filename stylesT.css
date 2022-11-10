@@ -11,7 +11,10 @@ width: 100%;
 }
 
 th, td {border: 1px solid white;}
-tr:2-6 {background-color: gray}
+tr:nth-child(even) {
+background-color: green;
+border: 1px solid white;
+}
 
 a:link, a:visited  {
     color: white;
