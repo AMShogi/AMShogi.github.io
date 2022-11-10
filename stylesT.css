@@ -11,10 +11,6 @@ width: 100%;
 }
 th, td {border: 1px solid white;}
 
-col:nth-child(odd) {
-background-color: green;
-}
-
 a:link, a:visited  {
     color: white;
 }
