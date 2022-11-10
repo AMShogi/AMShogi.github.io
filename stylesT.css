@@ -9,11 +9,10 @@ border-collapse: collapse;
 text-align: center;
 width: 100%;
 }
-
 th, td {border: 1px solid white;}
-tr:nth-child(even) {
+
+col:nth-child(even) {
 background-color: green;
-border: 1px solid white;
 }
 
 a:link, a:visited  {
