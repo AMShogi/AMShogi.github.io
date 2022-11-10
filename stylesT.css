@@ -11,6 +11,7 @@ width: 100%;
 }
 
 th, td {border: 1px solid white;}
+tr:2-6 {background-color: gray}
 
 a:link, a:visited  {
     color: white;
