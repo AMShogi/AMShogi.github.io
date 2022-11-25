@@ -13,6 +13,7 @@ li {margin: 5px;}
 }
 #tabla a:hover {color: red;}
 #tabla {white-space: nowrap;}
+#tabla tr {text-indent: 2px;}
 a, a:visited {color: white;}
 
 table {
