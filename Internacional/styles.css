@@ -7,12 +7,12 @@ h1 {text-align: center;}
 
 li {margin: 5px;}
 
-a {
+#tabla a, a:visited {
     color: white;
     text-decoration: none;
 }
-a:visited {color: white;}
-a:hover {color: red;}
+#tabla a:hover {color: red;}
+a, a:visited {color: white;}
 
 table {
 border-collapse: collapse;

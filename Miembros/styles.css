@@ -17,11 +17,12 @@ background-color: green;
 border: 1px solid white;
 }
 
-a:link, a:visited  {
+#tabla a, a:visited {
     color: white;
-    text-decoration: none
+    text-decoration: none;
 }
-a:hover {color: red;}
+#tabla a:hover {color: red;}
+a, a:visited {color: white;}
 
 .dropdown {
 position: relative;
