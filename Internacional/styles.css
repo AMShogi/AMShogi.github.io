@@ -7,14 +7,17 @@ h1 {text-align: center;}
 
 li {margin: 5px;}
 
+a, a:visited {color: white;}
+
 #tabla a, a:visited {
     color: white;
     text-decoration: none;
 }
 #tabla a:hover {color: red;}
-#tabla {white-space: nowrap;}
-#tabla tr {text-indent: 2px;}
-a, a:visited {color: white;}
+#tabla tr {
+text-indent: 2px;
+white-space: nowrap;
+}
 
 table {
 border-collapse: collapse;

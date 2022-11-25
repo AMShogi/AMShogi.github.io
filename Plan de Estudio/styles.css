@@ -3,5 +3,4 @@ body {
     color: white;
 }
 li {margin: 5px;}
-a:link {color: white}
-a:visited {color: white;}
+a:link, a:visited {color: white}
