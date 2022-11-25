@@ -12,6 +12,7 @@ li {margin: 5px;}
     text-decoration: none;
 }
 #tabla a:hover {color: red;}
+#tabla {white-space: nowrap;}
 a, a:visited {color: white;}
 
 table {
