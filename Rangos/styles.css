@@ -3,6 +3,8 @@ background-color: black;
 color: white;
 }
 
+h1, h2 {text-align: center;}
+
 table {
 border-collapse: collapse;
 text-align: center;
