@@ -19,3 +19,21 @@ th, td {border: 1px solid white;}
 }
 #tabla a:hover {color: red;}
 a, a:visited {color: white;}
+
+.tooltip {
+position: relative;
+display: in-line;
+border-bottom: 1px dotted;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: gray;
+
+}
+
+.tooltip:hover.tooltiptext {
+visibility: visible;
+opacity: 1;
+}
