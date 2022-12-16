@@ -5,6 +5,8 @@ color: white;
 
 h1, h2 {text-align: center;}
 
+li {margin: 3px;}
+
 table {
 border-collapse: collapse;
 text-align: center;
