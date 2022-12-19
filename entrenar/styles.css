@@ -1,0 +1,6 @@
+body {
+    background-color: black;
+    color: white;
+}
+li {margin: 5px;}
+a:link, a:visited {color: white}

@@ -1,0 +1,55 @@
+body {
+background-color: black;
+color: white;
+white-space: nowrap;
+}
+
+table {
+border-collapse: collapse;
+text-align: center;
+width: 100%;
+}
+
+th, td {border: 1px solid white;}
+
+tr:nth-child(even) {
+background-color: green;
+border: 1px solid white;
+}
+
+#tabla a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+#tabla a:hover {color: red;}
+a, a:visited {color: white;}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+position: absolute;
+display: none;
+z-index: 1;
+}
+
+.dropdown-content p {
+display: block;
+background-color: black;
+color: white;
+margin: 0;
+border: 1px solid white;
+}
+
+.dropdown-content a {
+display: block;
+background-color: black;
+color: white;
+border: 1px solid white;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
