@@ -8,3 +8,5 @@ h1, h2 {text-align: center;}
 li {margin: 5px;}
 
 a:link, a:visited {color: white}
+
+label, input {margin: 10px;}
