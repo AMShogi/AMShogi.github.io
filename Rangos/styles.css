@@ -27,16 +27,11 @@ border-bottom: 1px dotted;
 visibility: hidden;
 background-color: dimgray;
 text-align: center;
-border-radius: 3px;
 position: absolute;
 z-index: 1;
-bottom: 125%;
-left: 50%;
-margin-left: -55px;
-opacity: 0;
+left: 110%;
 }
 
 .tooltip:hover .tooltiptext {
 visibility: visible;
-opacity: 1;
 }
