@@ -17,11 +17,11 @@ background-color: green;
 border: 1px solid white;
 }
 
-#tabla a, a:visited {
+#red a, a:visited {
     color: white;
     text-decoration: none;
 }
-#tabla a:hover {color: red;}
+#red a:hover {color: red;}
 a, a:visited {color: white;}
 
 .dropdown {

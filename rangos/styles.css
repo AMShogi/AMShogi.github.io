@@ -15,6 +15,12 @@ white-space: nowrap;
 }
 th, td {border: 1px solid white;}
 
+#red a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+#red a:hover {color: red;}
+
 a, a:visited {color: white;}
 
 .tooltip {
