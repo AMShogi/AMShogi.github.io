@@ -36,8 +36,6 @@ def handicap_calc():
             print("Rank difference:", rank_diff)
             print("Handicap: " + value)
             return
-
     raise Exception("Could not find handicap for rank difference " + rank_diff)
-
 
 handicap_calc()
