@@ -7,7 +7,6 @@ def handicap_input(message):
         return abs(int(rank) - 15)
     raise Exception("Rank does not contain 'kyu' or 'dan'")
 
-
 def handicap_calc():
     p1 = handicap_input("Enter Player 1 rank: ")
     p2 = handicap_input("Enter Player 2 rank: ")
