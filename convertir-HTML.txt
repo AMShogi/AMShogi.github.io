@@ -1,3 +1,1 @@
-Word a Markdown > Markdown a HTML https://codebeautify.org/markdown-to-html
-
-Tabla https://www.htmlwasher.com/
+Convertir a html y pegar aqui: https://www.htmlwasher.com/
