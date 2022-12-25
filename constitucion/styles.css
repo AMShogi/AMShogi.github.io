@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1, h2 {text-align: center;}
+
+li {margin: 5px;}
+
+a:link, a:visited {color: white}
