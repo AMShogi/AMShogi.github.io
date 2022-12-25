@@ -5,11 +5,12 @@ body {
     background-position: center;
     background-size: cover;
 }
-
+h1, h2 {text-align: center;}
 h3 {
     text-indent: 5px;
     line-height: 0px;
 }
+
 li {margin: 5px;}
 
 .navbar {
@@ -74,6 +75,7 @@ li {margin: 5px;}
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
+#centerBox p {text-indent: 5px;}
 #centerBox a:visited {color: white;}
 #centerBox a {color: white;}
 
