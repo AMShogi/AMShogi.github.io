@@ -10,7 +10,6 @@ h1, h2 {
     line-height: 3px;
 }
 h3, h4 {
-    text-indent: 5px;
     line-height: 0;
 }
 
@@ -79,14 +78,19 @@ li {margin: 5px;}
     color: white;
     
 }
-#centerBox p {text-indent: 5px;}
+#centerBox {
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-bottom: .5px;
+}
 #centerBox a:visited {color: white;}
 #centerBox a {color: white;}
 
 .footer {
     position: fixed;
+    padding-left: 2px;
     left: 0;
-    bottom: 1;
+    bottom: 0;
     width: 100%;
     background-color: rgba(255, 0, 0, 0.5);
     color: white;
