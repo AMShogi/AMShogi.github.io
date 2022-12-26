@@ -39,7 +39,7 @@ li {margin: 5px;}
     color: white;
     padding: 5px;
     font-size: 18px;
-    font-family: inherent;
+    font-family: initial;
     border: none;
     margin: 0;
     outline: none;
