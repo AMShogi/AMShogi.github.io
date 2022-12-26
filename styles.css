@@ -84,8 +84,7 @@ li {margin: 5px;}
 #centerBox a {color: white;}
 
 .footer {
-    padding-top: .5px;
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 1;
     width: 100%;
