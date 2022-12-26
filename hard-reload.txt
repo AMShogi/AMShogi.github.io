@@ -1,1 +1,2 @@
 CTRL + Shift + R
+markdown preview: CTRL + Shift + V
