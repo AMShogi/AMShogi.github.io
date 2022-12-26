@@ -5,7 +5,10 @@ body {
     background-position: center;
     background-size: cover;
 }
-h1, h2 {text-align: center;}
+h1, h2 {
+    text-align: center;
+    line-height: 3px;
+}
 h3, h4 {
     text-indent: 5px;
     line-height: 0;
