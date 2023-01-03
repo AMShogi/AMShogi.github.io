@@ -23,7 +23,7 @@ white-space: nowrap;
 
 table {
 border-collapse: collapse;
-width: 100%;
+width: auto;
 }
 th {text-align: center;}
 th, td {border: 1px solid white;}

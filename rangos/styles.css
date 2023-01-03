@@ -10,7 +10,7 @@ li {margin: 5px;}
 table {
 border-collapse: collapse;
 text-align: center;
-width: 100%;
+width: auto;
 white-space: nowrap;
 }
 th, td {border: 1px solid white;}

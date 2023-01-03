@@ -7,7 +7,7 @@ white-space: nowrap;
 table {
 border-collapse: collapse;
 text-align: center;
-width: 100%;
+width: auto;
 }
 
 th, td {border: 1px solid white;}
