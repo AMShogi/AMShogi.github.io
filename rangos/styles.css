@@ -12,7 +12,15 @@ border-collapse: collapse;
 text-align: center;
 width: auto;
 white-space: nowrap;
+margin-left: auto;
+margin-right: auto;
 }
+
+#alt-colors tr:nth-child(even) {
+    background-color: green;
+    border: 1px solid white;
+}
+
 th, td {border: 1px solid white;}
 
 #red a, a:visited {
