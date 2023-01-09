@@ -81,14 +81,14 @@ li {margin: 5px;}
 #centerBox {
     padding-top: 1px;
     padding-left: 3px;
-    padding-bottom: .5px;
 }
 #centerBox a:visited {color: white;}
 #centerBox a {color: white;}
 
 .footer {
-    position: fixed;
-    padding-left: 2px;
+    position: relative;
+    padding-left: 3px;
+    padding-top: .5px;
     left: 0;
     bottom: 0;
     width: 100%;
