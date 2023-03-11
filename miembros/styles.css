@@ -1,57 +1,102 @@
 body {
-background-color: black;
-color: white;
-white-space: nowrap;
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+}
+
+#shogi {
+    counter-reset: rowNumber;
+}
+
+#shogi tr:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+#shogi tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+#otros {
+    counter-reset: rowNumber -2;
+}
+
+#otros tr {
+    counter-increment: rowNumber;
+}
+
+#otros tr td:first-child::before {
+    content: counter(rowNumber);
 }
 
 table {
-border-collapse: collapse;
-text-align: center;
-width: auto;
-margin-left: auto;
-margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-th, td {border: 1px solid white;}
+th,
+td {
+    border: 1px solid white;
+}
 
 tr:nth-child(even) {
-background-color: green;
-border: 1px solid white;
+    background-color: green;
+    border: 1px solid white;
 }
 
-#red a, a:visited {
+#shogi a,
+a:visited {
     color: white;
     text-decoration: none;
 }
-#red a:hover {color: red;}
-a, a:visited {color: white;}
+
+#shogi a:hover {
+    color: red;
+}
+
+#otros a,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#otros a:hover {
+    color: red;
+}
+
+a,
+a:visited {
+    color: white;
+}
 
 .dropdown {
-position: relative;
-display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
-position: absolute;
-display: none;
-z-index: 1;
+    position: absolute;
+    display: none;
+    z-index: 1;
 }
 
 .dropdown-content p {
-display: block;
-background-color: black;
-color: white;
-margin: auto;
-border: 1px solid white;
+    display: block;
+    background-color: black;
+    color: white;
+    margin: auto;
+    border: 1px solid white;
 }
 
 .dropdown-content a {
-display: block;
-background-color: black;
-color: white;
-border: 1px solid white;
+    display: block;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
 }
 
 .dropdown:hover .dropdown-content {
-display: block;
+    display: block;
 }
