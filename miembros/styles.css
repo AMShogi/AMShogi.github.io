@@ -36,6 +36,8 @@ table {
     margin-right: auto;
 }
 
+th {cursor: pointer;}
+
 th,
 td {
     border: 1px solid white;
