@@ -1,13 +1,29 @@
-function handicap_calc() {
-    let p1 = document.getElementById('p1').value
-    // let p2 = document.getElementById('p2').value
+function handicap_input(text) {
+    rank_input = text.toLowerCase()
+    rank = Number.parseInt(rank_input)
 
-    rank = p1.includes('dan')
-    if (rank = true) {
-        rank = 15
-        return document.getElementById('output').innerHTML = rank
+    if (rank_input.includes('dan')) {
+        return rank += 14
+    } else if (rank_input.includes('kyu')) {
+        return Math.abs(rank - 15)
+    } else {
+        return alert('Please include kyu or dan')
     }
 }
+
+function handicap_calc() {
+    p1 = handicap_input(document.getElementById('p1').value)
+    p2 = handicap_input(document.getElementById('p2').value)
+}
+
+    // rank1 = Number.parseInt(p1)
+
+    // if (p1.includes('dan')) {
+    //     rank1 += 14
+    //     return document.getElementById('output').innerHTML = rank1
+    // } else if (p1.includes('kyu')) {
+    //     return rank1
+    // }
 
 // const handicap_dict = {
 //     "0": "No handicap",

@@ -1,6 +1,7 @@
 def handicap_input(message):
     rank_input = input(message).lower()
     rank = "".join(filter(str.isdigit, rank_input))
+    print(rank)
     if "dan" in rank_input:
         return int(rank) + 14
     elif "kyu" in rank_input:
