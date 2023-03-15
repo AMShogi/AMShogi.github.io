@@ -51,7 +51,7 @@ function handicap_calc() {
     // let result = document.getElementById('output').innerHTML
     for (const [key, value] of Object.entries(handicap_dict)) {
         if (key.includes(rank_dif)) {
-            document.getElementById('rank dif').innerHTML = 'Rank diferencia: ' + rank_dif
+            document.getElementById('rank dif').innerHTML = 'Rango diferencia: ' + rank_dif
             document.getElementById('handicap').innerHTML = 'Handicap: ' + value
             return
         }
