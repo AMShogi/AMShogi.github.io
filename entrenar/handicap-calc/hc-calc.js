@@ -11,7 +11,7 @@ function handicap_input(text) {
     } else if (rank_input.includes('k')) {
         return Math.abs(rank - 15)
     } else {
-        throw Error(alert('Please include d, k, or b for beginner'))
+        throw Error(alert('Por favor incluye d, k o b de beginner'))
     }
 }
 
@@ -51,12 +51,12 @@ function handicap_calc() {
     // let result = document.getElementById('output').innerHTML
     for (const [key, value] of Object.entries(handicap_dict)) {
         if (key.includes(rank_dif)) {
-            document.getElementById('rank dif').innerHTML = 'Rank difference: ' + rank_dif
+            document.getElementById('rank dif').innerHTML = 'Rank diferencia: ' + rank_dif
             document.getElementById('handicap').innerHTML = 'Handicap: ' + value
             return
         }
         else if (rank_dif > 15) {            
-            document.getElementById('rank dif').innerHTML = 'Rank difference: ' + rank_dif
+            document.getElementById('rank dif').innerHTML = 'Rango diferencia: ' + rank_dif
             document.getElementById('handicap').innerHTML = 'Handicap: ' + handicap_dict["14,15"]
             return
         }
