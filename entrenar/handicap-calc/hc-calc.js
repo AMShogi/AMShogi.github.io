@@ -2,14 +2,14 @@ function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
 
-    if (rank_input.includes('dan')) {
+    if (rank_input.includes('d')) {
         return rank += 14
-    } else if ((rank_input.includes('kyu') && rank > 15)) {
+    } else if ((rank_input.includes('k') && rank > 15)) {
         return (rank - 15) * -1
-    } else if (rank_input.includes('kyu')) {
+    } else if (rank_input.includes('k')) {
         return Math.abs(rank - 15)
     } else {
-        return alert('Please include kyu or dan')
+        return alert('Please include k or d')
     }
 }
 
