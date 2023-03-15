@@ -5,7 +5,7 @@ function handicap_input(text) {
     if (rank_input.includes('d')) {
         return rank += 14
     } else if (rank_input.includes('b')) {
-        return rank = 0
+        return rank = -5
     } else if ((rank_input.includes('k') && rank > 15)) {
         return (rank - 15) * -1
     } else if (rank_input.includes('k')) {
