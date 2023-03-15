@@ -4,11 +4,12 @@ function handicap_input(text) {
 
     if (rank_input.includes('dan')) {
         return rank += 14
+    } else if (rank_input.includes('kyu') && rank > 15) {
+        return (rank - 15) * -1
     } else if (rank_input.includes('kyu')) {
         return Math.abs(rank - 15)
     } else {
         return alert('Please include kyu or dan')
-        
     }
 }
 
@@ -42,10 +43,9 @@ function handicap_calc() {
             document.getElementById('rank dif').innerHTML = 'Rank difference: ' + rank_dif
             document.getElementById('handicap').innerHTML = 'Handicap: ' + value
         }
-        else if (rank_dif > 15) {
-            
+        else if (rank_dif > 15) {            
             document.getElementById('rank dif').innerHTML = 'Rank difference: ' + rank_dif
-            document.getElementById('handicap').innerHTML = 'Handicap: ' + handicap_dict[15]
+            document.getElementById('handicap').innerHTML = 'Handicap: ' + handicap_dict["14,15"]
         }
     }
 }
