@@ -4,7 +4,7 @@ function handicap_input(text) {
 
     if (rank_input.includes('dan')) {
         return rank += 14
-    } else if (rank_input.includes('kyu') && rank > 15) {
+    } else if ((rank_input.includes('kyu') && rank > 15)) {
         return (rank - 15) * -1
     } else if (rank_input.includes('kyu')) {
         return Math.abs(rank - 15)
@@ -17,8 +17,17 @@ function handicap_calc() {
     let p1 = handicap_input(document.getElementById('p1').value)
     let p2 = handicap_input(document.getElementById('p2').value)
 
-    let uwate = p1
-    let shitate = p2
+    if (p1 > p2) {
+        uwate = p1
+    } else {
+        uwate = p2
+    }
+
+    if (p2 > p1) {
+        shitate = p1
+    } else {
+        shitate = p2
+    }
 
     const handicap_dict = {
         "0": "No handicap",
@@ -42,10 +51,12 @@ function handicap_calc() {
         if (key.includes(rank_dif)) {
             document.getElementById('rank dif').innerHTML = 'Rank difference: ' + rank_dif
             document.getElementById('handicap').innerHTML = 'Handicap: ' + value
+            return
         }
         else if (rank_dif > 15) {            
             document.getElementById('rank dif').innerHTML = 'Rank difference: ' + rank_dif
             document.getElementById('handicap').innerHTML = 'Handicap: ' + handicap_dict["14,15"]
+            return
         }
     }
 }
