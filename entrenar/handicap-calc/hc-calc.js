@@ -1,15 +1,18 @@
 function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
-
+    
     if (rank_input.includes('d')) {
         return rank += 14
-    } else if ((rank_input.includes('k') && rank > 15)) {
+    } else if (rank_input.includes('b')) {
+        return rank = 0
+    }
+    else if ((rank_input.includes('k') && rank > 15)) {
         return (rank - 15) * -1
     } else if (rank_input.includes('k')) {
         return Math.abs(rank - 15)
     } else {
-        throw Error(alert('Please include d or k'))
+        throw Error(alert('Please include d, k, or b for beginner'))
     }
 }
 
