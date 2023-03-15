@@ -9,7 +9,7 @@ function handicap_input(text) {
     } else if (rank_input.includes('k')) {
         return Math.abs(rank - 15)
     } else {
-        return alert('Please include k or d')
+        throw Error(alert('Please include d or k'))
     }
 }
 
