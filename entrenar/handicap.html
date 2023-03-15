@@ -12,7 +12,18 @@
 <p style="text-align:center;"><a href="../index.html"><img src="../favicon/favicon.png" alt="Pagina Principal"></a></p>
 
 <h1>Shogi Handicap</h1>
-<h2><a href="handicap-calc/handicap-calc.html">Handicap Calculadora</a></h2>
+<h2><h1>Handicap Calculadora</h1>
+<p>v0.9</p>
+<label for="p1">Jugador-1 rango:</label><br>
+<input type="text" id="p1" name="p1" maxlength='3'><br>
+
+<label for="p1">Jugador-2 rango:</label><br>
+<input type="text" id="p2" name="p2" maxlength='3'><br>
+
+<input onclick="handicap_calc()" type="submit" value="Calcular">
+<p id='rank dif'>Rank difference:</p>
+<p id='handicap'>Handicap:</p>
+<a href="https://github.com/AMShogi/AMShogi.github.io/milestones">Report bug or suggestion</a>
 
 <h2>Terminos</h2>
 <p>Uwate: Jugador de mayor rango. Mueve primero. Ultiliza el rey osho (sin punto).</p>
@@ -147,5 +158,6 @@
         href="/rangos/pro-amateur.html">Comparación Rangos</a></p>
 <p><a
         href="https://www.google.com/url?q=https://drive.google.com/file/d/1t2rbzY6r9nQqPKWlAVruSQbUB7Ch7ZQo/view?usp%3Dsharing">Todos los Handicaps</a> ordenados por diferencia de material</p>
+<script src="hc-calc.js"></script>
 </body>
 </html>
