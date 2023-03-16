@@ -13,7 +13,7 @@ h3, h4 {
     line-height: 0;
 }
 
-li {margin: 5px;}
+li {margin-top: 5px;}
 
 .navbar {
     overflow: hidden;
@@ -72,8 +72,6 @@ li {margin: 5px;}
 
 #centerBox {
     padding: auto;
-    /* width: 75%;
-    margin-left: 10%; */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     
