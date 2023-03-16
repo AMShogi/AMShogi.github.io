@@ -9,11 +9,19 @@ function handicap_input(text) {
     }
 
     if (rank_input.includes('d')) {
-        return rank += 14
+        if (rank > 10) {
+            throw Error(alert('>10d no existe.'))
+        } else {
+            return rank += 14
+        }
     } else if (rank_input.includes('b')) {
         return rank = -5
     } else if ((rank_input.includes('k') && rank > 15)) {
-        return (rank - 15) * -1
+        if (rank > 30) {
+            throw Error(alert('30k es el rango mas bajo.'))
+        } else {
+            return (rank - 15) * -1
+        }
     } else if (rank_input.includes('k')) {
         return Math.abs(rank - 15)
     } else {
