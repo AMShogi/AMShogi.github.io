@@ -1,6 +1,12 @@
+'use strict'
+
 function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
+
+    if (rank < 1) {
+        throw Error(alert('Negativos no son aceptados. Tampoco zero'))
+    }
 
     if (rank_input.includes('d')) {
         return rank += 14
@@ -11,14 +17,15 @@ function handicap_input(text) {
     } else if (rank_input.includes('k')) {
         return Math.abs(rank - 15)
     } else {
-        throw Error(alert('Por favor incluye d, k o b de beginner'))
+        throw Error(alert('Por favor incluye d, k o b de beginner.'))
     }
 }
 
 function handicap_calc() {
     let p1 = handicap_input(document.getElementById('p1').value)
     let p2 = handicap_input(document.getElementById('p2').value)
-
+    let uwate
+    let shitate
     if (p1 > p2) {
         uwate = p1
     } else {
@@ -48,7 +55,6 @@ function handicap_calc() {
     }
 
     let rank_dif = uwate - shitate
-    // let result = document.getElementById('output').innerHTML
     for (const [key, value] of Object.entries(handicap_dict)) {
         if (key.includes(rank_dif)) {
             document.getElementById('rank dif').innerHTML = 'Rango diferencia: ' + rank_dif
