@@ -63,15 +63,17 @@ function handicap_calc() {
     }
 
     let rank_dif = uwate - shitate
+    let rango = document.getElementById('rank dif')
+    let handicap = document.getElementById('handicap')
     for (const [key, value] of Object.entries(handicap_dict)) {
         if (key.includes(rank_dif)) {
-            document.getElementById('rank dif').innerHTML = 'Rango diferencia: ' + rank_dif
-            document.getElementById('handicap').innerHTML = 'Handicap: ' + value
+            rango.innerHTML = 'Rango diferencia: ' + rank_dif
+            handicap.innerHTML = 'Handicap: ' + value
             return
         }
         else if (rank_dif > 15) {            
-            document.getElementById('rank dif').innerHTML = 'Rango diferencia: ' + rank_dif
-            document.getElementById('handicap').innerHTML = 'Handicap: ' + handicap_dict["14,15"]
+            rango.innerHTML = 'Rango diferencia: ' + rank_dif
+            handicap.innerHTML = 'Handicap: ' + handicap_dict["14,15"]
             return
         }
     }
