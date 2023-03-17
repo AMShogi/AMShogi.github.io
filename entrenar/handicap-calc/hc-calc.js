@@ -4,6 +4,12 @@ function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
 
+// let pro = document.getElementById('pro')
+// let textbox = document.getElementById('p1')
+// if (pro.checked == true) {
+// textbox.innerHTML = <button
+// }
+
     if (rank < 1) {
         throw Error(alert('Negativos no son aceptados. Tampoco zero'))
     }
