@@ -6,7 +6,9 @@ h1 {text-align: center;}
 li {margin-top: 5px;}
 a:link, a:visited {color: white}
 
-label, input {margin-top: 10px;}
+label, input {margin-top: 5px;}
+
+select {margin-bottom: 5px;}
 
 table {
     border-collapse: collapse;
