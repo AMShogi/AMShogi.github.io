@@ -3,10 +3,9 @@ body {
     color: white;
 }
 h1 {text-align: center;}
-li {margin-top: 5px;}
 a:link, a:visited {color: white}
 
-label, input {margin-top: 5px;}
+label, input, li {margin-top: 10px;}
 
 select {margin-bottom: 5px;}
 
