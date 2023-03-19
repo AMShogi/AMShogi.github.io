@@ -9,8 +9,8 @@ function handicap_input(text) {
     }
 
     if (rank_input.includes('d')) {
-        if (rank > 10) {
-            throw Error(alert('>10d no existe.'))
+        if (rank > 9) {
+            throw Error(alert('>9d no existe.'))
         } else {
             return rank += 14
         }
