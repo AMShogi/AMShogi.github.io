@@ -5,7 +5,14 @@ body {
 h1 {text-align: center;}
 a:link, a:visited {color: white}
 
-label, input, li {margin-top: 5px;}
+li {
+    margin-bottom: 5px;
+}
+
+label, input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 select {
     margin-bottom: 5px;
