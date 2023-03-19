@@ -5,6 +5,10 @@ body {
 h1 {text-align: center;}
 a:link, a:visited {color: white}
 
+li {
+    margin-bottom: 5px;
+}
+
 label, input {
     margin-top: 5px;
     margin-bottom: 5px;
