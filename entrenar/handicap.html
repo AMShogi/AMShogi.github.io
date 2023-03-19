@@ -14,8 +14,17 @@
 <h1>Shogi Handicap</h1>
 <h2>Handicap Calculadora</h2>
 <p style="margin-bottom: 3px;">v1.0</p>
-<select id="rankT" name="rankT" onclick="rank_select()">
-    <option value="rank_type">Rank type</option>
+<select id="rank1" name="rank1" onclick="rank_select()">
+    <option value="rank1">Jugador-1</option>
+    <option value="pro">Pro</option>
+    <option value="jouryu">Jouryu</option>
+    <option value="shoreikai">Shoreikai</option>
+    <option value="kenshukai">Kenshukai</option>
+    <option value="sc24">SC24</option>
+</select>
+
+<select id="rank2" name="rank2" onclick="rank_select()">
+    <option value="rank2">Jugador-2</option>
     <option value="pro">Pro</option>
     <option value="jouryu">Jouryu</option>
     <option value="shoreikai">Shoreikai</option>
@@ -23,12 +32,16 @@
     <option value="sc24">SC24</option>
 </select>
 <br>
-<label for="p1">Jugador-1 rango:</label><br>
-<input type="text" id="p1" name="p1" maxlength='3'>
+<label for="p1">Jugador-1</label>
+<select id="p1" name="p1">
+    <option value="rank_ama">rango</option>
+</select>
 <br>
-<label for="p1">Jugador-2 rango:</label><br>
-<input type="text" id="p2" name="p2" maxlength='3'><br>
-
+<label for="p2">Jugador-2</label>
+<select id="p2" name="p2">
+    <option value="rank_ama">rango</option>
+</select>
+<br>
 <input onclick="handicap_calc()" type="submit" value="Calcular">
 <p id='rank dif'>Rango diferencia:</p>
 <p id='handicap'>Handicap:</p>
