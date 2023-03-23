@@ -1,4 +1,5 @@
 'use strict'
+// if select pro remove rank range
 
 function handicap_input(text) {
     let rank_input = text.toLowerCase()
