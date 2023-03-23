@@ -1,5 +1,17 @@
 'use strict'
 // if select pro remove rank range
+// loop dict to make rank range
+// onclick adds rank unrestricted times
+
+// function ama() {
+//     let k15 = document.getElementById('rank range2')
+//     let jugador2 = document.getElementById('p2')
+//     let c = document.createElement('option')
+//     if (k15.value = '15-10k') {
+//         c.text = '15k'
+//         jugador2.options.add(c, 1)
+//     }
+// }
 
 function handicap_input(text) {
     let rank_input = text.toLowerCase()
