@@ -14,6 +14,9 @@
 <h1>Shogi Handicap</h1>
 <h2>Handicap Calculadora</h2>
 <p style="margin-bottom: 3px;">v1.0</p>
+<input type="checkbox" id="15k" name="15k">
+<label for="15k">15-10k</label>
+<br>
 <select id="rank1" name="rank1" onclick="rank_select()">
     <option value="rank1">Jugador-1</option>
     <option value="pro">Pro</option>
@@ -35,11 +38,13 @@
 <label for="p1">Jugador-1</label>
 <select id="p1" name="p1">
     <option value="rank_ama">rango</option>
+    <option>1-Dan</option>
 </select>
 <br>
 <label for="p2">Jugador-2</label>
 <select id="p2" name="p2">
     <option value="rank_ama">rango</option>
+    <option>15-kyu</option>
 </select>
 <br>
 <input onclick="handicap_calc()" type="submit" value="Calcular">
