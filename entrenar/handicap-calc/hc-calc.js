@@ -71,7 +71,7 @@ function handicap_calc() {
             handicap.innerHTML = 'Handicap: ' + value
             return
         }
-        else if (rank_dif > 15) {            
+        else if (rank_dif > 15) {
             rango.innerHTML = 'Rango diferencia: ' + rank_dif
             handicap.innerHTML = 'Handicap: ' + handicap_dict["14,15"]
             return
