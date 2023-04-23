@@ -4,17 +4,25 @@ function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
 
-    if (rank < 1) {
-        throw Error(alert('Negativos no son aceptados. Tampoco zero'))
-    }
+    try {
+        // if (rank_input = '') {
 
-    if (rank_input.includes('d')) {
-        if (rank > 9) {
-            throw Error(alert('>9d no existe.'))
-        } else {
-            return rank += 14
+        // }
+        if (rank < 1) {
+            throw 'Negativos no son aceptados. Tampoco zero'
         }
-    } else if (rank_input.includes('b')) {
+        if (rank_input.includes('d')) {
+            if (rank > 9) {
+                throw '>9d no existe.'
+            } else {
+                return rank += 14
+            }
+        }
+    }
+    catch (err) {
+        alert(err)
+    }
+    if (rank_input.includes('b')) {
         return rank = -5
     } else if ((rank_input.includes('k') && rank > 15)) {
         if (rank > 30) {
