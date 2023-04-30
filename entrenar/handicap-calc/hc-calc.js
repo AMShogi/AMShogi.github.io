@@ -5,9 +5,9 @@ function handicap_input(text) {
     let rank = Number.parseInt(rank_input)
 
     try {
-        // if (rank_input = '') {
-
-        // }
+        if (text == '') {
+            throw 'No pusiste nada -_-'
+        }
         if (rank < 1) {
             throw 'Negativos no son aceptados. Tampoco zero'
         }
@@ -31,10 +31,10 @@ function handicap_input(text) {
             return (rank - 15) * -1
         }
     } else if (rank_input.includes('k')) {
-        return Math.abs(rank - 15)
-    } else {
-        throw Error(alert('Por favor incluye d, k o b de beginner.'))
-    }
+        return Math.abs(rank - 15) }
+    // } else {
+    //     throw Error(alert('Por favor incluye d, k o b de beginner.'))
+    // }
 }
 
 function handicap_calc() {
