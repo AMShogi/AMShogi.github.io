@@ -40,6 +40,7 @@ function handicap_input(text) {
 function handicap_calc() {
     let p1 = handicap_input(document.getElementById('p1').value)
     let p2 = handicap_input(document.getElementById('p2').value)
+
     let uwate
     let shitate
     if (p1 > p2) {
