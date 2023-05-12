@@ -4,7 +4,7 @@ function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
 
-    try {
+    try {        
         if (text == '') {
             throw 'No pusiste nada -_-'
         }
@@ -62,11 +62,11 @@ function handicap_calc() {
         "3": "Bishop",
         "4": "Rook",
         "5": "Rook + Lance",
-        "6,7": "2-piece",
-        "8,9": "4-piece",
-        "10": "6-piece",
-        "11": "8-Piece",
-        "12": "10-Piece",
+        "6,7": "2-Pieza",
+        "8,9": "4-Pieza",
+        "10": "6-Pieza",
+        "11": "8-Pieza",
+        "12": "10-Pieza",
         "13": "3 Pawns",
         "14,15": "Naked King",
     }
