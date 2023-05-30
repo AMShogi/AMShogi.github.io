@@ -3,8 +3,16 @@ body {
     color: white;
 }
 
-h1, h2 {text-align: center;}
+h1,
+h2 {
+    text-align: center;
+}
 
-li {margin-top: 5px;}
+li {
+    margin-top: 5px;
+}
 
-a:link, a:visited {color: white}
+a:link,
+a:visited {
+    color: white
+}

@@ -2,14 +2,22 @@ body {
     background-color: black;
     color: white;
 }
-h1 {text-align: center;}
-a:link, a:visited {color: white}
+
+h1 {
+    text-align: center;
+}
+
+a:link,
+a:visited {
+    color: white
+}
 
 li {
     margin-bottom: 5px;
 }
 
-label, input {
+label,
+input {
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -22,8 +30,15 @@ table {
     border-collapse: collapse;
     width: auto;
 }
-th {text-align: center;}
-th, td {border: 1px solid white;}
+
+th {
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid white;
+}
 
 tr:nth-child(even) {
     background-color: green;
