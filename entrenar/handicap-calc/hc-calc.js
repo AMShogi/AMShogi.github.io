@@ -8,6 +8,10 @@ function handicap_input(text) {
         if (text == '') {
             throw 'No pusiste nada -_-'
         }
+        if (rank_input.includes('d') == false && rank_input.includes('k') == false
+        && rank_input.includes('b') == false) {
+            throw 'Por favor incluye d, k o b de beginner.'
+        }
         if (rank < 1) {
             throw 'Negativos no son aceptados. Tampoco zero'
         }
