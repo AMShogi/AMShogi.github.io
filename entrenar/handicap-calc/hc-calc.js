@@ -4,17 +4,29 @@ function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
 
-    if (rank < 1) {
-        throw Error(alert('Negativos no son aceptados. Tampoco zero'))
-    }
-
-    if (rank_input.includes('d')) {
-        if (rank > 9) {
-            throw Error(alert('>9d no existe.'))
-        } else {
-            return rank += 14
+    try {        
+        if (text == '') {
+            throw 'No pusiste nada -_-'
         }
-    } else if (rank_input.includes('b')) {
+        if (rank_input.includes('d') == false && rank_input.includes('k') == false
+        && rank_input.includes('b') == false) {
+            throw 'Por favor incluye d, k o b de beginner.'
+        }
+        if (rank < 1) {
+            throw 'Negativos no son aceptados. Tampoco zero'
+        }
+        if (rank_input.includes('d')) {
+            if (rank > 9) {
+                throw '>9d no existe.'
+            } else {
+                return rank += 14
+            }
+        }
+    }
+    catch (err) {
+        alert(err)
+    }
+    if (rank_input.includes('b')) {
         return rank = -5
     } else if ((rank_input.includes('k') && rank > 15)) {
         if (rank > 30) {
@@ -23,15 +35,16 @@ function handicap_input(text) {
             return (rank - 15) * -1
         }
     } else if (rank_input.includes('k')) {
-        return Math.abs(rank - 15)
-    } else {
-        throw Error(alert('Por favor incluye d, k o b de beginner.'))
-    }
+        return Math.abs(rank - 15) }
+    // } else {
+    //     throw Error(alert('Por favor incluye d, k o b de beginner.'))
+    // }
 }
 
 function handicap_calc() {
     let p1 = handicap_input(document.getElementById('p1').value)
     let p2 = handicap_input(document.getElementById('p2').value)
+
     let uwate
     let shitate
     if (p1 > p2) {
