@@ -4,16 +4,16 @@ function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
 
-    try {        
+    try {
         if (text == '') {
             throw 'No pusiste nada -_-'
         }
-        if (rank_input.includes('d') == false && rank_input.includes('k') == false
-        && rank_input.includes('b') == false) {
-            throw 'Por favor incluye d, k o b de beginner.'
-        }
         if (rank < 1) {
             throw 'Negativos no son aceptados. Tampoco zero'
+        }
+        if (rank_input.includes('d') == false && rank_input.includes('b') == false
+            && rank_input.includes('k') == false) {
+            throw 'Por favor incluye d, k o b de beginner.'
         }
         if (rank_input.includes('d')) {
             if (rank > 9) {
@@ -22,23 +22,21 @@ function handicap_input(text) {
                 return rank += 14
             }
         }
+        if (rank_input.includes('b')) {
+            return rank = -5
+        } else if ((rank_input.includes('k') && rank > 15)) {
+            if (rank > 30) {
+                throw '30k es el rango mas bajo.'
+            } else {
+                return (rank - 15) * -1
+            }
+        } else if (rank_input.includes('k')) {
+            return Math.abs(rank - 15)
+        }
     }
     catch (err) {
         alert(err)
     }
-    if (rank_input.includes('b')) {
-        return rank = -5
-    } else if ((rank_input.includes('k') && rank > 15)) {
-        if (rank > 30) {
-            throw Error(alert('30k es el rango mas bajo.'))
-        } else {
-            return (rank - 15) * -1
-        }
-    } else if (rank_input.includes('k')) {
-        return Math.abs(rank - 15) }
-    // } else {
-    //     throw Error(alert('Por favor incluye d, k o b de beginner.'))
-    // }
 }
 
 function handicap_calc() {
