@@ -4,12 +4,20 @@ function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
 
+    let rankStr = Boolean
+    function hasNum() {
+        return rankStr = /\d/.test(rank_input)
+    }
+    hasNum()
     try {
         if (text == '') {
             throw 'No pusiste nada -_-'
         }
         if (rank < 1) {
             throw 'Negativos no son aceptados. Tampoco zero'
+        }
+        if (rankStr == false && rank_input.includes('b') == false) {
+            throw 'Escribe numbero y tipo de rango.'
         }
         if (rank_input.includes('d') == false && rank_input.includes('b') == false
             && rank_input.includes('k') == false) {
