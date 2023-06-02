@@ -17,7 +17,7 @@ function handicap_input(text) {
             throw 'Negativos no son aceptados. Tampoco zero'
         }
         if (rankStr == false && rank_input.includes('b') == false) {
-            throw 'Escribe numbero y tipo de rango.'
+            throw 'Escribe numero y tipo de rango.'
         }
         if (rank_input.includes('d') == false && rank_input.includes('b') == false
             && rank_input.includes('k') == false) {
