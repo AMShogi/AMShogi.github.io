@@ -1,12 +1,14 @@
 'use strict'
 
 function handicap_input(text) {
-    let rank_input = text.toLowerCase()
-    let rank = Number.parseInt(rank_input)
+    let rankInput = text.toLowerCase()
+    let rank = Number.parseInt(rankInput)
 
-    let rankStr = Boolean
+    let rank_digit = Boolean
+    let rank_letter = Boolean
     function hasNum() {
-        return rankStr = /\d/.test(rank_input)
+        rank_letter = /^\D/.test(rankInput)
+        rank_digit = /\d/.test(rankInput)
     }
     hasNum()
     try {
@@ -16,29 +18,29 @@ function handicap_input(text) {
         if (rank < 1) {
             throw 'Negativos no son aceptados. Tampoco zero'
         }
-        if (rankStr == false && rank_input.includes('b') == false) {
-            throw 'Escribe numero y tipo de rango.'
+        if ((rank_digit == false || rank_letter == true) && rankInput.includes('b') == false) {
+            throw 'El formato es: numero, letra.'
         }
-        if (rank_input.includes('d') == false && rank_input.includes('b') == false
-            && rank_input.includes('k') == false) {
+        if (rankInput.includes('d') == false && rankInput.includes('b') == false
+            && rankInput.includes('k') == false) {
             throw 'Por favor incluye d, k o b de beginner.'
         }
-        if (rank_input.includes('d')) {
+        if (rankInput.includes('d')) {
             if (rank > 9) {
                 throw '>9d no existe.'
             } else {
                 return rank += 14
             }
         }
-        if (rank_input.includes('b')) {
+        if (rankInput.includes('b')) {
             return rank = -5
-        } else if ((rank_input.includes('k') && rank > 15)) {
+        } else if ((rankInput.includes('k') && rank > 15)) {
             if (rank > 30) {
                 throw '30k es el rango mas bajo.'
             } else {
                 return (rank - 15) * -1
             }
-        } else if (rank_input.includes('k')) {
+        } else if (rankInput.includes('k')) {
             return Math.abs(rank - 15)
         }
     }
