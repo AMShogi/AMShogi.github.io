@@ -31,12 +31,12 @@ td {
     border: 1px solid white;
 }
 
-#red a,
+.table, #red a,
 a:visited {
     text-decoration: none;
 }
 
-#red a:hover {
+.table, #red a:hover {
     color: red;
 }
 

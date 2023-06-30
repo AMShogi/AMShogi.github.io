@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    color: white;
 }
 
 h1,
@@ -25,6 +26,11 @@ a:hover {
     color: red;
 }
 
+a,
+a:visited {
+    color: white
+}
+
 .navbar {
     overflow: hidden;
     background-color: green;
@@ -33,7 +39,6 @@ a:hover {
 
 .navbar a {
     float: left;
-    color: white;
     text-align: center;
     padding: auto;
     text-decoration: none;
@@ -70,16 +75,10 @@ a:hover {
 .dropdown-content a {
     float: none;
     background-color: black;
-    color: white;
     padding: 5px;
     text-decoration: none;
     display: block;
     text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: red;
-    color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -89,21 +88,11 @@ a:hover {
 #centerBox {
     padding: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-
 }
 
 #centerBox {
     padding-top: 1px;
     padding-left: 3px;
-}
-
-#centerBox a:visited {
-    color: white;
-}
-
-#centerBox a {
-    color: white;
 }
 
 .footer {
@@ -114,13 +103,4 @@ a:hover {
     bottom: 0;
     width: 100%;
     background-color: rgba(255, 0, 0, 0.5);
-    color: white;
-}
-
-.footer a {
-    color: white;
-}
-
-.footer a:visited {
-    color: white;
 }

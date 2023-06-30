@@ -7,13 +7,25 @@ h1 {
     text-align: center;
 }
 
-a:link,
+a,
 a:visited {
     color: white
 }
 
 a:hover {
     color: red;
+}
+
+#divA{
+    counter-reset: rowNumber;
+}
+
+#divA:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+#divA td:first-child::before {
+    content: counter(rowNumber);
 }
 
 table {
@@ -23,6 +35,14 @@ table {
     white-space: nowrap;
     margin-left: auto;
     margin-right: auto;
+}
+
+#teaching {
+    margin-left: 0;
+}
+
+#teaching a, a:visited {
+    text-decoration: none;
 }
 
 th {
@@ -37,18 +57,6 @@ td {
 tr:nth-child(even) {
     background-color: green;
     border: 1px solid white;
-}
-
-#divA{
-    counter-reset: rowNumber;
-}
-
-#divAtr:not(:first-child) {
-    counter-increment: rowNumber;
-}
-
-#divAtr td:first-child::before {
-    content: counter(rowNumber);
 }
 
 #divA a,
