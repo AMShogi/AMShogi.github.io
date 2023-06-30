@@ -33,8 +33,7 @@ table {
     text-align: center;
     width: auto;
     white-space: nowrap;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1;
 }
 
 #teaching {
