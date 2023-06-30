@@ -4,10 +4,10 @@ body {
 }
 
 #A {
-    counter-reset: rowNumber;
+    counter-reset: rowNumber -2;
 }
 
-#A tr:not(:first-child) {
+#A tr {
     counter-increment: rowNumber;
 }
 
