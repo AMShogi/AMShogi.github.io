@@ -75,6 +75,7 @@ a:visited {
 .dropdown-content a {
     float: none;
     background-color: black;
+    color: white;
     padding: 5px;
     text-decoration: none;
     display: block;
