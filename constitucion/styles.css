@@ -16,3 +16,7 @@ a:link,
 a:visited {
     color: white
 }
+
+a:hover {
+    color: red;
+}

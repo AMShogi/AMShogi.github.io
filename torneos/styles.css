@@ -16,23 +16,13 @@ a:hover {
     color: red;
 }
 
-li {
-    margin-bottom: 5px;
-}
-
-label,
-input {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-select {
-    margin-bottom: 5px;
-}
-
 table {
     border-collapse: collapse;
+    text-align: center;
     width: auto;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th {
@@ -49,6 +39,23 @@ tr:nth-child(even) {
     border: 1px solid white;
 }
 
-button {
-    margin-top: 5px;
+#divA{
+    counter-reset: rowNumber;
+}
+
+#divAtr:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+#divAtr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+#divA a,
+a:visited {
+    text-decoration: none;
+}
+
+#divA a:hover {
+    color: red;
 }

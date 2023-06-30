@@ -21,6 +21,10 @@ li {
     margin-top: 5px;
 }
 
+a:hover {
+    color: red;
+}
+
 .navbar {
     overflow: hidden;
     background-color: green;

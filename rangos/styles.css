@@ -33,11 +33,14 @@ td {
 
 #red a,
 a:visited {
-    color: white;
     text-decoration: none;
 }
 
 #red a:hover {
+    color: red;
+}
+
+a:hover {
     color: red;
 }
 
