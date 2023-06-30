@@ -3,6 +3,18 @@ body {
     color: white;
 }
 
+#A {
+    counter-reset: rowNumber;
+}
+
+#A tr:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+#A tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
 h1 {
     text-align: center;
 }
@@ -14,18 +26,6 @@ a:visited {
 
 a:hover {
     color: red;
-}
-
-#divA{
-    counter-reset: rowNumber;
-}
-
-#divA:not(:first-child) {
-    counter-increment: rowNumber;
-}
-
-#divA td:first-child::before {
-    content: counter(rowNumber);
 }
 
 table {
@@ -59,11 +59,11 @@ tr:nth-child(even) {
     border: 1px solid white;
 }
 
-#divA a,
+#A a,
 a:visited {
     text-decoration: none;
 }
 
-#divA a:hover {
+#A a:hover {
     color: red;
 }
