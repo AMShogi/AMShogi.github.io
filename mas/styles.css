@@ -7,22 +7,31 @@ h1 {
     text-align: center;
 }
 
-li {
-    margin-top: 5px;
-}
-
 a:link,
 a:visited {
     color: white
 }
 
-table {
-    border-collapse: collapse;
-    width: auto;
+a:hover {
+    color: red;
 }
 
-th {
-    text-align: center;
+label,
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select {
+    margin-bottom: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    /* text-align: center; */
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th,
