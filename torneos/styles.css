@@ -57,12 +57,3 @@ tr:nth-child(even) {
     background-color: green;
     border: 1px solid white;
 }
-
-#A a,
-a:visited {
-    text-decoration: none;
-}
-
-#A a:hover {
-    color: red;
-}
