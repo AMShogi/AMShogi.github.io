@@ -15,18 +15,6 @@ body {
     content: counter(rowNumber);
 }
 
-#lote {
-    counter-reset: rowNumber -1;
-}
-
-#lote tr {
-    counter-increment: rowNumber;
-}
-
-#lote tr td:first-child::before {
-    content: counter(rowNumber);
-}
-
 h1 {
     text-align: center;
 }
@@ -52,7 +40,8 @@ table {
     margin-left: 0;
 }
 
-#teaching a, a:visited {
+#teaching a,
+a:visited {
     text-decoration: none;
 }
 
