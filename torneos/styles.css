@@ -58,3 +58,7 @@ tr:nth-child(even) {
     background-color: green;
     border: 1px solid white;
 }
+
+li {
+    margin-top: 5px;
+}
