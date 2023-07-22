@@ -20,14 +20,24 @@ li {
     margin-bottom: 5px;
 }
 
+label,
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select {
+    margin-bottom: 5px;
+}
+
 table {
     border-collapse: collapse;
     width: auto;
 }
 
-th {
+/* th {
     text-align: center;
-}
+} */
 
 th,
 td {
@@ -37,4 +47,8 @@ td {
 tr:nth-child(even) {
     background-color: green;
     border: 1px solid white;
+}
+
+button {
+    margin-top: 5px;
 }
