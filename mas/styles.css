@@ -28,7 +28,7 @@ select {
 
 table {
     border-collapse: collapse;
-    /* text-align: center; */
+    text-align: center;
     width: auto;
     margin-left: auto;
     margin-right: auto;
