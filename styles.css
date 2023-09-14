@@ -4,16 +4,32 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    color: white;
 }
-h1, h2 {
+
+h1,
+h2 {
     text-align: center;
     line-height: 3px;
 }
-h3, h4 {
+
+h3,
+h4 {
     line-height: 0;
 }
 
-li {margin: 5px;}
+li {
+    margin-top: 5px;
+}
+
+a:hover {
+    color: red;
+}
+
+a,
+a:visited {
+    color: white
+}
 
 .navbar {
     overflow: hidden;
@@ -23,7 +39,6 @@ li {margin: 5px;}
 
 .navbar a {
     float: left;
-    color: white;
     text-align: center;
     padding: auto;
     text-decoration: none;
@@ -45,7 +60,10 @@ li {margin: 5px;}
     outline: none;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {background-color: red;}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
 
 .dropdown-content {
     font-size: 18px;
@@ -64,26 +82,19 @@ li {margin: 5px;}
     text-align: left;
 }
 
-.dropdown-content a:hover {
-    background-color: red; color: white;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
-
-.dropdown:hover .dropdown-content {display: block;}
 
 #centerBox {
     padding: auto;
-    /* width: 75%;
-    margin-left: 10%; */
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    
 }
+
 #centerBox {
     padding-top: 1px;
     padding-left: 3px;
 }
-#centerBox a:visited {color: white;}
-#centerBox a {color: white;}
 
 .footer {
     position: relative;
@@ -93,7 +104,4 @@ li {margin: 5px;}
     bottom: 0;
     width: 100%;
     background-color: rgba(255, 0, 0, 0.5);
-    color: white;
 }
-.footer a {color: white;}
-.footer a:visited {color: white;}

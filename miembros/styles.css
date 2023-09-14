@@ -4,6 +4,10 @@ body {
     white-space: nowrap;
 }
 
+h1 {
+    text-align: center;
+}
+
 #shogi {
     counter-reset: rowNumber;
 }
@@ -50,7 +54,6 @@ tr:nth-child(even) {
 
 #shogi a,
 a:visited {
-    color: white;
     text-decoration: none;
 }
 
@@ -60,7 +63,6 @@ a:visited {
 
 #otros a,
 a:visited {
-    color: white;
     text-decoration: none;
 }
 
@@ -89,13 +91,6 @@ a:visited {
     background-color: black;
     color: white;
     margin: auto;
-    border: 1px solid white;
-}
-
-.dropdown-content a {
-    display: block;
-    background-color: black;
-    color: white;
     border: 1px solid white;
 }
 

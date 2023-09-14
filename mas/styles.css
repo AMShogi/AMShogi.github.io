@@ -16,17 +16,22 @@ a:hover {
     color: red;
 }
 
-li {
+label,
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select {
     margin-bottom: 5px;
 }
 
 table {
     border-collapse: collapse;
-    width: auto;
-}
-
-th {
     text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th,

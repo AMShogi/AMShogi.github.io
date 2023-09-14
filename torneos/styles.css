@@ -3,11 +3,23 @@ body {
     color: white;
 }
 
+#A {
+    counter-reset: rowNumber -2;
+}
+
+#A tr {
+    counter-increment: rowNumber;
+}
+
+#A tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
 h1 {
     text-align: center;
 }
 
-a:link,
+a,
 a:visited {
     color: white
 }
@@ -16,13 +28,21 @@ a:hover {
     color: red;
 }
 
-li {
-    margin-bottom: 5px;
-}
-
 table {
     border-collapse: collapse;
+    text-align: center;
     width: auto;
+    white-space: nowrap;
+    margin-left: 1;
+}
+
+#teaching {
+    margin-left: 0;
+}
+
+#teaching a,
+a:visited {
+    text-decoration: none;
 }
 
 th {
@@ -37,4 +57,8 @@ td {
 tr:nth-child(even) {
     background-color: green;
     border: 1px solid white;
+}
+
+li {
+    margin-top: 5px;
 }
