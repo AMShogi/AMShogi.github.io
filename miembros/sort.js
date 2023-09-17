@@ -52,8 +52,6 @@ function sort_abc(n) {
 
 //             Number.parseInt(x, y)
 
-            
-
 //             if (x.innerHTML > y.innerHTML) {
 //                 shouldSwitch = true;
 //                 break;
