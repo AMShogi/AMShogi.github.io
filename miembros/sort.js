@@ -36,6 +36,7 @@ function sort_abc(n) {
     }
 }
 
+// https://www.w3schools.com/js/js_array_sort.asp
 // function sortRank(n) {
 //     var table, rows, switching, i, x, y, shouldSwitch;
 //     table = document.getElementById('shogi');
@@ -50,7 +51,11 @@ function sort_abc(n) {
 //             x = rows[i].getElementsByTagName('TD')[n];
 //             y = rows[i + 1].getElementsByTagName('TD')[n];
 
-//             Number.parseInt(x, y)
+//             Number.parseInt(x.innerHTML, y.innerHTML)
+
+//             // if (x.innerHTML.includes('dan')) {
+//             //     return x += -16
+//             // }
 
 //             if (x.innerHTML > y.innerHTML) {
 //                 shouldSwitch = true;
