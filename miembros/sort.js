@@ -50,7 +50,11 @@ function sort_abc(n) {
 //             x = rows[i].getElementsByTagName('TD')[n];
 //             y = rows[i + 1].getElementsByTagName('TD')[n];
 
-//             if (Number(x.innerHTML[0]) > Number(y.innerHTML[0])) {
+//             Number.parseInt(x, y)
+
+            
+
+//             if (x.innerHTML > y.innerHTML) {
 //                 shouldSwitch = true;
 //                 break;
 //             }
