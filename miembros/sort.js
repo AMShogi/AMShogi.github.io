@@ -23,16 +23,15 @@ function sort_abc(n) {
             }
         }
         if (shouldSwitch) {
-             rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
-             switching = true
-             switchcount ++
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+            switching = true
+            switchcount++
+        } else {
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
         }
-        // else {
-        //     if (switchcount == 0 && dir == 'asc') {
-        //         dir = 'desc'
-        //         switching = true
-        //     }
-        // }
     }
 }
 
