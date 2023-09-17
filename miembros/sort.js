@@ -36,6 +36,8 @@ function sort_abc(n) {
 }
 
 // https://www.w3schools.com/js/js_array_sort.asp
+// send dan to top then descending
+
 // function sortRank(n) {
 //     var table, rows, switching, i, x, y, shouldSwitch;
 //     table = document.getElementById('shogi');
