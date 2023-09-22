@@ -6,7 +6,7 @@ document.getElementById('dan_sdos').innerHTML = dan_sdos
 document.getElementById('LMsdos').innerHTML = LMsdos
 
 // Clase B
-let drlennon_promo = +1
+let drlennon_promo = 1
 let Gisari_promo = -1
 
 document.getElementById('drlennon_promo').innerHTML = drlennon_promo
