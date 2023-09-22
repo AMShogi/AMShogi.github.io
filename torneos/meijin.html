@@ -38,7 +38,7 @@
         <td><a href="https://system.81dojo.com/en/players/show/LittleMage">LittleMage</a></td>
         <td>3-dan</td>
         <td id="LMsdos"></td>
-        <td></td>
+        <td id="LMpromo"></td>
     </tr>
     <tr>
         <td></td>
@@ -52,7 +52,7 @@
         <td><a href="https://system.81dojo.com/en/players/show/Incursor">Incursor</a></td>
         <td>2-dan</td>
         <td></td>
-        <td></td>
+        <td id="Incursor_promo"></td>
     </tr>
     <tr>
         <td></td>
@@ -65,7 +65,7 @@
 <br>
 <table id="A">
     <tr>
-        <th colspan="5"><a href="https://system.81dojo.com/en/tournaments/4081">Clase B</a></th>
+        <th colspan="4"><a href="https://system.81dojo.com/en/tournaments/4081">Clase B</a></th>
     </tr>
     <tr>
         <th>#</th>
@@ -175,6 +175,31 @@
 
 <h4>Desempates</h4>
 <p><a href="https://senseis.xmp.net/?SODOS">SODOS</a> Suma de la puntacion de oponentes vencidos.</p>
+
+<h4>Penalizaciones</h4>
+<h4>Ausente en la fecha de la partida</h4>
+<ul>
+    <li>1ra infraccion: llamada de atencion.</li>
+    <li>2da: la partida sera perdida automaticamente.</li>
+</ul>
+
+<h4>No jugar una partida en 2 semanas</h4>
+<ul>
+    <li>1ra infraccion: llamada de atencion</li>
+    <li>2da: medio punto de descenso.</li>
+    <ul>
+        <li>Lo maximo que se puede penalizar por temporada es -1 punto.</li>
+    </ul>
+</ul>
+
+<h4>Falta de partidas al terminar el torneo</h4>
+<ul>
+    <li>1 partida: medio punto de descenso.</li>
+    <li>+2 partidas: -1 punto de descenso.</li>
+</ul>
+
+<p>Los puntos de descenso por penalizaciones pueden ser borrados el siguiente torneo jugando todas las partidas a
+    tiempo (cada 2 semanas).</p>
 
 <script src="desempate.js"></script>
 </body>
