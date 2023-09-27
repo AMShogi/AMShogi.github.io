@@ -25,13 +25,14 @@ function sort_abc(n) {
         if (shouldSwitch) {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
             switching = true
-            switchcount++
-        } else {
-            if (switchcount == 0 && dir == "asc") {
-                dir = "desc";
-                switching = true;
-            }
-        }
+            switchcount ++
+        } 
+        // else {
+        //     if (switchcount == 0 && dir == "asc") {
+        //         dir = "desc";
+        //         switching = true;
+        //     }
+        // }
     }
 }
 
@@ -53,10 +54,6 @@ function sort_abc(n) {
 //             y = rows[i + 1].getElementsByTagName('TD')[n];
 
 //             Number.parseInt(x.innerHTML, y.innerHTML)
-
-//             // if (x.innerHTML.includes('dan')) {
-//             //     return x += -16
-//             // }
 
 //             if (x.innerHTML > y.innerHTML) {
 //                 shouldSwitch = true;
