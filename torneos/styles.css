@@ -4,7 +4,7 @@ body {
 }
 
 #A {
-    counter-reset: rowNumber -2;
+    counter-reset: rowNumber -3;
 }
 
 #A tr {
