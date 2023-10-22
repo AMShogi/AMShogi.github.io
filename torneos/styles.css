@@ -4,14 +4,20 @@ body {
 }
 
 #A {
+    counter-reset: rowNumber -4;
+}
+
+#B {
     counter-reset: rowNumber -3;
 }
 
-#A tr {
+#A tr,
+#B tr {
     counter-increment: rowNumber;
 }
 
-#A tr td:first-child::before {
+#A tr td:first-child::before,
+#B tr td:first-child::before {
     content: counter(rowNumber);
 }
 
