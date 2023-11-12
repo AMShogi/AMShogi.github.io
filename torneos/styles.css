@@ -3,21 +3,27 @@ body {
     color: white;
 }
 
-#A {
-    counter-reset: rowNumber -4;
+#meijin {
+    counter-reset: rowNumber -2;
 }
 
-#B {
+#ryuo {
     counter-reset: rowNumber -3;
 }
 
-#A tr,
-#B tr {
+#div1 {
+    counter-reset: rowNumber -4;
+}
+
+#meijin tr,
+#ryuo tr,
+#div1 tr {
     counter-increment: rowNumber;
 }
 
-#A tr td:first-child::before,
-#B tr td:first-child::before {
+#meijin tr td:first-child::before,
+#ryuo tr td:first-child::before,
+#div1 tr td:first-child::before {
     content: counter(rowNumber);
 }
 
