@@ -1,5 +1,4 @@
-let LMpromo = -0.5 + 0.5
-// let incursor_promo = -0.5
+//let LMpromo =
 let gera_promo = 1
 let marc_promo = -1
 
@@ -9,6 +8,7 @@ document.getElementById('gera_promo').innerHTML = gera_promo
 document.getElementById('marc_promo').innerHTML = marc_promo
 
 // Clase B
+//let incursor_promo =
 let drlennon_promo = 1
 let Gisari_promo = -1
 
