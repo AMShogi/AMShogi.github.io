@@ -1,17 +1,3 @@
-// Clase A
-let dan_sdos = 8 + 5 + 5
-let LMsdos = 8 + 6
-let marc_sdos = 8 + 6
-let incursor_sdos = 8
-let gera_sdos = 10 + 8
-
-document.getElementById('dan_sdos').innerHTML = dan_sdos
-document.getElementById('LMsdos').innerHTML = LMsdos
-document.getElementById('marc_sdos').innerHTML = marc_sdos
-document.getElementById('incursor_sdos').innerHTML = incursor_sdos
-document.getElementById('gera_sdos').innerHTML = gera_sdos
-
-
 let LMpromo = -0.5
 // let incursor_promo = -0.5
 let gera_promo = 1
