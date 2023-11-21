@@ -2,8 +2,8 @@
 let gera_promo = 1
 let marc_promo = -1
 
-document.getElementById('LMpromo').innerHTML = LMpromo
-// document.getElementById('incursor_promo').innerHTML = incursor_promo
+//document.getElementById('LMpromo').innerHTML = LMpromo
+//document.getElementById('incursor_promo').innerHTML = incursor_promo
 document.getElementById('gera_promo').innerHTML = gera_promo
 document.getElementById('marc_promo').innerHTML = marc_promo
 
