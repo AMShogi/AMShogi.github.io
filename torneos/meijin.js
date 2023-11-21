@@ -1,4 +1,4 @@
-let LMpromo = -0.5
+let LMpromo = -0.5 + 0.5
 // let incursor_promo = -0.5
 let gera_promo = 1
 let marc_promo = -1
