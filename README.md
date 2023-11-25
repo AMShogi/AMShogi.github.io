@@ -6,3 +6,6 @@ Si tienes cuenta de Github puedes ir a un documento de este repositorio y sugeri
 
 Hard refresh: CTRL + Shift + R
 markdown preview: CTRL + Shift + V
+
+history bracket
+https://en.wikipedia.org/wiki/Shogi_variant
