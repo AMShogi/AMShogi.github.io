@@ -48,9 +48,8 @@ table {
     margin-left: 1;
 }
 
-.td a,
-a:visted {
-    color: white
+td {
+    color: white;
 }
 
 
