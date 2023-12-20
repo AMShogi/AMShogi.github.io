@@ -48,6 +48,12 @@ table {
     margin-left: 1;
 }
 
+.td a,
+a:visted {
+    color: white
+}
+
+
 #teaching {
     margin-left: 0;
 }
