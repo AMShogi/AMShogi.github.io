@@ -33,7 +33,7 @@ h1 {
 
 a,
 a:visited {
-    color: LightBlue;
+    color: aqua;
 }
 
 a:hover {
@@ -47,11 +47,6 @@ table {
     white-space: nowrap;
     margin-left: 1;
 }
-
-td {
-    color: white;
-}
-
 
 #teaching {
     margin-left: 0;
