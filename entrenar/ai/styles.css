@@ -19,22 +19,3 @@ a:hover {
 li {
     margin-bottom: 5px;
 }
-
-table {
-    border-collapse: collapse;
-    width: auto;
-}
-
-th {
-    text-align: center;
-}
-
-th,
-td {
-    border: 1px solid white;
-}
-
-tr:nth-child(even) {
-    background-color: green;
-    border: 1px solid white;
-}
