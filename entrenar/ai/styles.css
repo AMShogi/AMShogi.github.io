@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+a:link,
+a:visited {
+    color: paleturquoise
+}
+
+a:hover {
+    color: red;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: auto;
+}
+
+th {
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid white;
+}
+
+tr:nth-child(even) {
+    background-color: green;
+    border: 1px solid white;
+}

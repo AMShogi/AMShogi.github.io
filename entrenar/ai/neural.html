@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shogi Maquinas</title>
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<base target="_blank">
+</head>
+
+<body>
+<p style="text-align:center;"><a href="/index.html"><img src="/favicon/favicon.png" alt="Página Principal"></a>
+</p>
+<ul>
+    <li>
+        <strong>Do not use an engine while playing a game</strong>
+        <strong>
+            <em>.
+            </em>
+        </strong>It is cheating and may result in bans and/or hate from everyone. I am not responsible for anything
+        that happens when following this tutorial.
+    </li>
+</ul>
+<p>
+    <strong>Download
+    </strong>
+    <a target="_blank" href="http://shogidokoro.starfree.jp/download.html">
+        <strong>Shogidokoro</strong>
+    </a>
+    <strong>
+        GUI</strong>
+</p>
+<ul>
+    <li>Shogidokoro doesn't need to be installed just open the
+        <strong>Shogidokoro.exe</strong>
+    </li>
+</ul>
+<p>
+    <strong>DeepLearning engine
+    </strong>
+    <a target="_blank" href="https://github.com/TadaoYamaoka/DeepLearningShogi">
+        <strong>dlshogi</strong>
+    </a>
+</p>
+<ul>
+    <li>Download
+        <a target="_blank" href="https://github.com/TadaoYamaoka/DeepLearningShogi/releases">dlshogi</a>
+    </li>
+    <li>Download
+        <a target="_blank"
+            href="https://github.com/TadaoYamaoka/DeepLearningShogi/releases/tag/dr2_exhi">model-dr2_exhi.zip</a>
+    </li>
+    <ul>
+        <li>
+            <a target="_blank" href="https://tadaoyamaoka.hatenablog.com/entry/2021/08/17/000710">Password</a>
+        </li>
+    </ul>
+    <li>Download and install
+        <a target="_blank"
+            href="https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">vc_redist.x64.exe</a>
+    </li>
+    <li>Register
+        <strong>dlshogi_onnxruntime.exe
+        </strong>Game &gt; Engine Manager &gt; Add
+    </li>
+    <li>Double-click
+        <strong>dlshogi</strong>
+        in the
+        <strong>Engine List</strong>
+        to open
+        <strong>Engine Configuration.</strong>
+    </li>
+    <ul>
+        <li>Change
+            <strong>DNN_Model
+            </strong>to
+            <strong>model-dr2_exhi.onnx</strong>
+        </li>
+    </ul>
+</ul>
+<p>
+    <strong>Neural Network engine
+    </strong>
+    <a target="_blank" href="https://github.com/kobanium/aobazero">
+        <strong>AobaZero</strong>
+    </a>
+</p>
+<ul>
+    <li>Download<strong></strong>
+        <a target="_blank" href="https://github.com/kobanium/aobazero/releases">CPU exe</a>
+        and download
+        <a target="_blank" href="http://www.yss-aya.com/aobazero/index_e.html">Latest weight=</a>
+    </li>
+    <li>In the folder
+        <strong>aobazero-XX-w64-cpu</strong>
+        make a new folder named
+        <strong>weight-save</strong>
+        and inside it copy-paste the extracted
+        <strong>weight</strong>.
+    </li>
+</ul>
+<ul>
+    <li>Right-click
+        <strong>aobaz.bat
+        </strong>and select edit. It'll open in Notepad and change the bold numbers of the last line:
+    </li>
+    <ul>
+        <li>bin\aobaz -q -i -p 100 -h 1 -w weight-save\w00000000<strong>2184</strong>.txt</li>
+        <li>To match the number of w00000000<span style="color:paleturquoise;">####
+            </span>.txt file in your weight-save folder.</li>
+    </ul>
+    <li>If instructions are unclear AobaZero has an
+        <a target="_blank" href="https://github.com/kobanium/aobazero/blob/release/README_en.md">English
+            README.md</a>
+    </li>
+    <li>To increase depth right-click
+        <strong>aobaz.bat
+        </strong>and select edit. It'll open in Notepad.
+    </li>
+    <ul>
+        <li>Increase by 100 the bold number.</li>
+        <li>bin\aobaz -q -i -p
+            <strong>100</strong>
+            -h 1 -w weight-save\w00000000<strong>####</strong>.txt
+        </li>
+    </ul>
+    <li>Go to Game &gt; Engine Manager &gt; Add and select
+        <strong>aobaz.bat</strong>
+    </li>
+</ul>
+<p>
+    <strong>Handicap neural engine:</strong>
+    <a target="_blank" href="https://github.com/yssaya/komaochi/releases">AobaKomaochi</a>
+</p>
+<p>
+    <strong>How to Analyze A Game?</strong>
+</p>
+<p>After finishing a game in 81dojo, click these to copy the KIFU notation text.</p>
+<p>Go back to Shogidokoro, then click Edit &gt; Paste Game (or simply press Ctrl+V).</p>
+<ul>
+    <li>Go to Game(G) &gt; Analyze Game and click Set and Start</li>
+</ul>
+<p>
+    <strong>How the engine evaluates the position</strong>. A positive number means Black is better, while a
+    negative number means White is better.
+</p>
+<ol>
+    <li>A value of ±1000 or larger means that one side has a clear advantage.</li>
+    <li>
+        <strong>Condition</strong>: how the engine evaluates the position, but in words.
+    </li>
+</ol>
+<p>
+    <strong>Move eval</strong>: how the engine evaluates the move.
+</p>
+<ol>
+    <li>An exclamation point (!) means the engine thinks the move is actually better than its own suggestion.</li>
+    <li>A large circle (O) means the engine agrees with the move.</li>
+    <li>A dot (.) means the move is "inferior", but still very decent.</li>
+    <li>Finally, in order of increasingly worse evaluations:</li>
+    <ol>
+        <li>?</li>
+        <li>Dubious move ?</li>
+        <li>Bad move ??</li>
+    </ol>
+</ol>
+<ol>
+    <li>
+        <strong>Diff</strong>: the jump in value from the previous position.
+    </li>
+    <li>
+        <strong>Candidate</strong>: engine's suggested move.
+    </li>
+    <li>
+        <strong>Moves</strong>: the sequence of moves that engine sees as best for both sides.
+    </li>
+</ol>
+<p>
+    <strong>Tips on using an engine</strong>
+</p>
+<ol>
+    <li>As a beginner, focus more on large spikes in the evaluation. If you are Sente, and you played a move that
+        reduces the evaluation from 200 to -200, relax. It's still even. But a drop from 200 to -1000 is worth
+        looking into.</li>
+</ol>
+</body>
+
+</html>
