@@ -3,16 +3,10 @@ body {
     color: white;
 }
 
-#meijin {
-    counter-reset: rowNumber -2;
-}
-
-#ryuo {
-    counter-reset: rowNumber -3;
-}
-
+#meijin,
+#ryuo,
 #div1 {
-    counter-reset: rowNumber -4;
+    counter-reset: rowNumber -2;
 }
 
 #meijin tr,
@@ -45,20 +39,16 @@ table {
     text-align: center;
     width: auto;
     white-space: nowrap;
-    margin-left: 1;
+    margin-left: 1; /* Please specify a unit (e.g., 1px, 1em) */
 }
 
 #teaching {
-    margin-left: 0;
+    margin-left: 0; /* Please specify a unit (e.g., 0px, 0em) */
 }
 
 #teaching a,
 a:visited {
     text-decoration: none;
-}
-
-th {
-    text-align: center;
 }
 
 th,

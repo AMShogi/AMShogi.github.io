@@ -3,16 +3,25 @@ body {
     color: white;
 }
 
-h1,
-h2 {
+h1, h2 {
     text-align: center;
 }
 
-li {
+li, label, input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select {
+    margin-bottom: 5px;
+}
+
+button {
     margin-top: 5px;
 }
 
-table {
+/* Tables */
+table, #hc {
     border-collapse: collapse;
     text-align: center;
     width: auto;
@@ -22,35 +31,26 @@ table {
 }
 
 #alt-colors tr:nth-child(even),
-#hc tr:nth-child(even)
-{
+#hc tr:nth-child(even) {
     background-color: green;
     border: 1px solid white;
 }
 
-th,
-td {
+th, td {
     border: 1px solid white;
 }
 
-.table, #red a,
-a:visited {
+/* Links */
+.table, #red a, a:visited {
     text-decoration: none;
+    color: paleturquoise;
 }
 
-.table, #red a:hover {
+#red a:hover, a:hover {
     color: red;
 }
 
-a:hover {
-    color: red;
-}
-
-a,
-a:visited {
-    color: paleturquoise
-}
-
+/* Tooltip */
 .tooltip {
     position: relative;
     display: inline-block;
@@ -68,25 +68,4 @@ a:visited {
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
-}
-
-label,
-input {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-select {
-    margin-bottom: 5px;
-}
-
-button {
-    margin-top: 5px;
-}
-
-#hc {
-    border-collapse: collapse;
-    width: auto;
-    margin-left: 0%;
-    text-align: left;
 }

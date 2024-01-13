@@ -1,8 +1,8 @@
 'use strict'
 
 function handicap_input(text) {
-    let rankInput = text.toLowerCase()
-    let rank = Number.parseInt(rankInput)
+    const rankInput = text.toLowerCase();
+    const rank = Number.parseInt(rankInput);    
 
     let rank_digit = Boolean
     let rank_letter = Boolean
@@ -26,11 +26,7 @@ function handicap_input(text) {
             throw 'Por favor incluye d, k o b de beginner.'
         }
         if (rankInput.includes('d')) {
-            if (rank > 9) {
-                throw '>9d no existe.'
-            } else {
-                return rank += 14
-            }
+            return (rank > 9) ? rank + 14 : null;
         }
         if (rankInput.includes('b')) {
             return rank = -5

@@ -8,39 +8,22 @@ h1 {
     text-align: center;
 }
 
-#shogi {
-    counter-reset: rowNumber;
-}
-
-#shogi tr:not(:first-child) {
-    counter-increment: rowNumber;
-}
-
-#shogi tr td:first-child::before {
-    content: counter(rowNumber);
-}
-
-#otros {
-    counter-reset: rowNumber -2;
-}
-
-#otros tr {
-    counter-increment: rowNumber;
-}
-
-#otros tr td:first-child::before {
-    content: counter(rowNumber);
-}
-
-table {
-    border-collapse: collapse;
-    text-align: center;
+.table-container {
     width: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-th {cursor: pointer;}
+table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+th {
+    cursor: pointer;
+    border: 1px solid white;
+}
 
 th,
 td {
@@ -49,30 +32,21 @@ td {
 
 tr:nth-child(even) {
     background-color: green;
-    border: 1px solid white;
-}
-
-#shogi a,
-a:visited {
-    text-decoration: none;
-}
-
-#shogi a:hover {
-    color: red;
-}
-
-#otros a,
-a:visited {
-    text-decoration: none;
-}
-
-#otros a:hover {
-    color: red;
 }
 
 a,
 a:visited {
-    color: paleturquoise
+    color: paleturquoise;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+#shogi a:hover,
+#otros a:hover {
+    color: red;
 }
 
 .dropdown {

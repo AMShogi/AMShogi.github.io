@@ -9,7 +9,8 @@ h1 {
 
 a:link,
 a:visited {
-    color: paleturquoise
+    color: paleturquoise;
+    text-decoration: none; /* Added to remove default underline */
 }
 
 a:hover {
@@ -17,12 +18,9 @@ a:hover {
 }
 
 label,
-input {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
+input,
 select {
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -30,8 +28,7 @@ table {
     border-collapse: collapse;
     text-align: center;
     width: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto; /* Combined margin-left and margin-right into shorthand */
 }
 
 th,
