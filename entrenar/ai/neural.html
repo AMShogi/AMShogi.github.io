@@ -11,139 +11,86 @@
 </head>
 
 <body>
-<p style="text-align:center;"><a href="/index.html"><img src="/favicon/favicon.png" alt="Página Principal"></a>
+<p style="text-align:center;">
+    <a href="/index.html"><img src="/favicon/favicon.png" alt="Página Principal"></a>
 </p>
-<p><strong>No uses maquina mientras juegas partidas. Es trampa</strong> y puede resultar en ban y discriminacion
-por la comunidad.</p>
+<p>No uses la maquina mientras juegas partidas. Es trampa y puede resultar en ban y discriminación por la comunidad.
+</p>
 <h3>Descarga <a href="http://shogidokoro.starfree.jp/download.html">Shogidokoro</a> GUI</h3>
 <ul>
-    <li>No es necesario instalar Shogidokoro, solo abre el
-        <strong>Shogidokoro.exe</strong>
-    </li>
+    <li>No es necesario instalar Shogidokoro, solo abre el Shogidokoro.exe</li>
 </ul>
-<p>
-    <strong>Maquina de Deep Learning
-    </strong>
-    <a href="https://github.com/TadaoYamaoka/DeepLearningShogi">
-        <strong>dlshogi</strong>
-    </a>
-</p>
+<h3>Maquina de Deep Learning <a href="https://github.com/TadaoYamaoka/DeepLearningShogi">dlshogi</a></h3>
 <ul>
-    <li>Descargar
-        <a href="https://github.com/TadaoYamaoka/DeepLearningShogi/releases">dlshogi</a>
-    </li>
-    <li>Descargar
-        <a target="_blank"
+    <li>Descargar <a href="https://github.com/TadaoYamaoka/DeepLearningShogi/releases">dlshogi</a></li>
+    <li>Descargar <a target="_blank"
             href="https://github.com/TadaoYamaoka/DeepLearningShogi/releases/tag/dr2_exhi">model-dr2_exhi.zip</a>
+        <ul>
+            <li><a href="https://tadaoyamaoka.hatenablog.com/entry/2021/08/17/000710">Contraseña</a></li>
+        </ul>
     </li>
-    <ul>
-        <li>
-            <a href="https://tadaoyamaoka.hatenablog.com/entry/2021/08/17/000710">Contraseña</a>
-        </li>
-    </ul>
-    <li>Descargar e instalar
-        <a target="_blank"
+    <li>Descargar e instalar <a target="_blank"
             href="https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">vc_redist.x64.exe</a>
     </li>
-    <li>Registrar
-        <strong>dlshogi_onnxruntime.exe
-        </strong>Juego > Maquinas > Agregar
+    <li>Registrar dlshogi_onnxruntime.exe Juego > Maquinas > Agregar</li>
+    <li>Hacer doble clic en dlshogi en la Lista de maquinas para abrir la Configuración de maquinas.
+        <ul>
+            <li>Cambiar DNN_Model a model-dr2_exhi.onnx</li>
+        </ul>
     </li>
-    <li>Hacer doble clic en
-        <strong>dlshogi</strong>
-        en la
-        <strong>Lista de maquinas</strong>
-        para abrir la
-        <strong>Configuración de maquinas.</strong>
-    </li>
-    <ul>
-        <li>Cambiar
-            <strong>DNN_Model
-            </strong>a
-            <strong>model-dr2_exhi.onnx</strong>
-        </li>
-    </ul>
 </ul>
-<p>
-    <strong>Maquina Neural
-    </strong>
-    <a href="https://github.com/kobanium/aobazero">
-        <strong>AobaZero</strong>
-    </a>
-</p>
+<h3>Maquina Neural <a href="https://github.com/kobanium/aobazero">AobaZero</a></h3>
 <ul>
-    <li>Descargar<strong></strong>
-        <a href="https://github.com/kobanium/aobazero/releases">exe para CPU</a>
-        y
-        <a href="http://www.yss-aya.com/aobazero/index_e.html">Latest weight=</a>
-    </li>
-    <li>En la carpeta
-        <strong>aobazero-XX-w64-cpu</strong>
-        crear una nueva carpeta llamada
-        <strong>weight-save</strong>
-        y dentro de ella copiar y pegar el
-        <strong>weight</strong>.
-    </li>
+    <li>Descargar <a href="https://github.com/kobanium/aobazero/releases">exe para CPU</a> y <a
+            href="http://www.yss-aya.com/aobazero/index_e.html">Latest weight=</a></li>
+    <li>En la carpeta aobazero-XX-w64-cpu crear una nueva carpeta llamada weight-save y dentro de ella copiar y
+        pegar el weight.</li>
 </ul>
 <ul>
-    <li>Hacer clic derecho en
-        <strong>aobaz.bat
-        </strong>y seleccionar editar. Se abrirá en el Bloc de notas y cambiar los números en negrita de la
-        última línea:
+    <li>Hacer clic derecho en aobaz.bat y seleccionar editar. Se abrirá en el Bloc de notas y cambiar los números en
+        negrita de la última línea:
+        <ul>
+            <li>bin\aobaz -q -i -p 100 -h 1 -w weight-save\w00000000<strong>2184</strong>.txt</li>
+            <li>Para que coincida con el número de archivos w00000000<span
+                    style="color:paleturquoise;">####</span>.txt en tu carpeta weight-save.</li>
+        </ul>
     </li>
-    <ul>
-        <li>bin\aobaz -q -i -p 100 -h 1 -w weight-save\w00000000<strong>2184</strong>.txt</li>
-        <li>Para que coincida con el número de archivos w00000000<span style="color:paleturquoise;">####
-            </span>.txt en tu carpeta weight-save.</li>
-    </ul>
-    <li>Si las instrucciones no son claras, AobaZero tiene un
-        <a href="https://github.com/kobanium/aobazero/blob/release/README_en.md">README.md en inglés</a>
+    <li>Si las instrucciones no son claras, AobaZero tiene un <a
+            href="https://github.com/kobanium/aobazero/blob/release/README_en.md">README.md en inglés</a></li>
+    <li>Para aumentar la profundidad, hacer clic derecho en aobaz.bat y seleccionar editar. Se abrirá en el Bloc de
+        notas.
+        <ul>
+            <li>Aumentar en 100 el número en negrita.</li>
+            <li>bin\aobaz -q -i -p <strong>100</strong> -h 1 -w weight-save\w00000000<strong>####</strong>.txt</li>
+        </ul>
     </li>
-    <li>Para aumentar la profundidad, hacer clic derecho en
-        <strong>aobaz.bat
-        </strong>y seleccionar editar. Se abrirá en el Bloc de notas.
-    </li>
-    <ul>
-        <li>Aumentar en 100 el número en negrita.</li>
-        <li>bin\aobaz -q -i -p
-            <strong>100</strong>
-            -h 1 -w weight-save\w00000000<strong>####</strong>.txt
-        </li>
-    </ul>
-    <li>Ir a Juego > Gestor de maquinas > Agregar y seleccionar
-        <strong>aobaz.bat</strong>
-    </li>
+    <li>Ir a Juego > Gestor de maquinas > Agregar y seleccionar aobaz.bat</li>
 </ul>
-<p>
-    <strong>Maquina de Handicap Neural:</strong>
-    <a href="https://github.com/yssaya/komaochi/releases">AobaKomaochi</a>
-</p>
-<p>
-    <strong>Cómo analizar una partida</strong>
-</p>
+<h3>Maquina de Handicap Neural: <a href="https://github.com/yssaya/komaochi/releases">AobaKomaochi</a></h3>
+<h3>Cómo analizar una partida</h3>
 <p>Después de terminar un juego en 81dojo, haz clic en estos para copiar el texto de notación KIFU.</p>
 <p>Vuelve a Shogidokoro, luego haz clic en Editar > Pegar Juego (o simplemente presiona Ctrl+V).</p>
 <ul>
     <li>Ir a Juego(G) > Analizar Juego y hacer clic en Configurar y Comenzar</li>
 </ul>
 <p>
-    <strong>Cómo evalúa el maquina la posición</strong>. Un número positivo significa que Negro está mejor,
+    <strong>Cómo evalúa la maquina la posición</strong>. Un número positivo significa que Negro está mejor,
     mientras que un
     número negativo significa que Blanco está mejor.
 </p>
 <ol>
     <li>Un valor de ±1000 o más grande significa que un lado tiene una clara ventaja.</li>
     <li>
-        <strong>Condición</strong>: cómo el maquina evalúa la posición, pero en palabras.
+        <strong>Condición</strong>: cómo la maquina evalúa la posición, pero en palabras.
     </li>
 </ol>
 <p>
-    <strong>Evaluación del movimiento</strong>: cómo el maquina evalúa el movimiento.
+    <strong>Evaluación del movimiento</strong>: cómo la maquina evalúa el movimiento.
 </p>
 <ol>
-    <li>Un signo de exclamación (!) significa que el maquina piensa que el movimiento es realmente mejor que su
+    <li>Un signo de exclamación (!) significa que la maquina piensa que el movimiento es realmente mejor que su
         propia sugerencia.</li>
-    <li>Un círculo grande (O) significa que el maquina está de acuerdo con el movimiento.</li>
+    <li>Un círculo grande (O) significa que la maquina está de acuerdo con el movimiento.</li>
     <li>Un punto (.) significa que el movimiento es "inferior", pero aún muy decente.</li>
     <li>Finalmente, en orden de evaluaciones cada vez peores:</li>
     <ol>
@@ -157,16 +104,14 @@ por la comunidad.</p>
         <strong>Diferencia</strong>: el salto en valor desde la posición anterior.
     </li>
     <li>
-        <strong>Candidato</strong>: movimiento sugerido por el maquina.
+        <strong>Candidato</strong>: movimiento sugerido por la maquina.
     </li>
     <li>
-        <strong>Movimientos</strong>: la secuencia de movimientos que el maquina ve como la mejor para ambos
+        <strong>Movimientos</strong>: la secuencia de movimientos que la maquina ve como la mejor para ambos
         lados.
     </li>
 </ol>
-<p>
-    <strong>Consejos para usar un maquina</strong>
-</p>
+<h3>Consejos para usar una maquina</h3>
 <ol>
     <li>Como principiante, concéntrate más en los grandes picos en la evaluación. Si eres Sente y has jugado un
         movimiento que
