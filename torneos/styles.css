@@ -28,6 +28,7 @@ h1 {
 a,
 a:visited {
     color: paleturquoise;
+    text-decoration: none;
 }
 
 a:hover {
@@ -39,16 +40,11 @@ table {
     text-align: center;
     width: auto;
     white-space: nowrap;
-    margin-left: 1; /* Please specify a unit (e.g., 1px, 1em) */
+    margin-left: 1;
 }
 
 #teaching {
-    margin-left: 0; /* Please specify a unit (e.g., 0px, 0em) */
-}
-
-#teaching a,
-a:visited {
-    text-decoration: none;
+    margin-left: 0;
 }
 
 th,

@@ -30,6 +30,8 @@ table, #hc {
     margin-right: auto;
 }
 
+#hc {margin: 0;}
+
 #alt-colors tr:nth-child(even),
 #hc tr:nth-child(even) {
     background-color: green;
@@ -41,7 +43,7 @@ th, td {
 }
 
 /* Links */
-.table, #red a, a:visited {
+a, a:visited {
     text-decoration: none;
     color: paleturquoise;
 }
