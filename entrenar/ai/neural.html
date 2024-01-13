@@ -14,160 +14,165 @@
 <p style="text-align:center;"><a href="/index.html"><img src="/favicon/favicon.png" alt="Página Principal"></a>
 </p>
 <p><strong>No uses maquina mientras juegas partidas. Es trampa</strong> y puede resultar en ban y discriminacion
-    por la comunidad.</p>
+por la comunidad.</p>
 <h3>Descarga <a href="http://shogidokoro.starfree.jp/download.html">Shogidokoro</a> GUI</h3>
 <ul>
-    <li>Shogidokoro doesn't need to be installed just open the
+<ul>
+    <li>No es necesario instalar Shogidokoro, solo abre el
         <strong>Shogidokoro.exe</strong>
     </li>
 </ul>
 <p>
-    <strong>DeepLearning engine
+    <strong>Motor de Deep Learning
     </strong>
     <a href="https://github.com/TadaoYamaoka/DeepLearningShogi">
         <strong>dlshogi</strong>
     </a>
 </p>
 <ul>
-    <li>Download
+    <li>Descargar
         <a href="https://github.com/TadaoYamaoka/DeepLearningShogi/releases">dlshogi</a>
     </li>
-    <li>Download
+    <li>Descargar
         <a target="_blank"
             href="https://github.com/TadaoYamaoka/DeepLearningShogi/releases/tag/dr2_exhi">model-dr2_exhi.zip</a>
     </li>
     <ul>
         <li>
-            <a href="https://tadaoyamaoka.hatenablog.com/entry/2021/08/17/000710">Password</a>
+            <a href="https://tadaoyamaoka.hatenablog.com/entry/2021/08/17/000710">Contraseña</a>
         </li>
     </ul>
-    <li>Download and install
+    <li>Descargar e instalar
         <a target="_blank"
             href="https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">vc_redist.x64.exe</a>
     </li>
-    <li>Register
+    <li>Registrar
         <strong>dlshogi_onnxruntime.exe
-        </strong>Game &gt; Engine Manager &gt; Add
+        </strong>Juego > Gestor de motores > Agregar
     </li>
-    <li>Double-click
+    <li>Hacer doble clic en
         <strong>dlshogi</strong>
-        in the
-        <strong>Engine List</strong>
-        to open
-        <strong>Engine Configuration.</strong>
+        en la
+        <strong>Lista de motores</strong>
+        para abrir la
+        <strong>Configuración del motor.</strong>
     </li>
     <ul>
-        <li>Change
+        <li>Cambiar
             <strong>DNN_Model
-            </strong>to
+            </strong>a
             <strong>model-dr2_exhi.onnx</strong>
         </li>
     </ul>
 </ul>
 <p>
-    <strong>Neural Network engine
+    <strong>Motor de Red Neuronal
     </strong>
     <a href="https://github.com/kobanium/aobazero">
         <strong>AobaZero</strong>
     </a>
 </p>
 <ul>
-    <li>Download<strong></strong>
-        <a href="https://github.com/kobanium/aobazero/releases">CPU exe</a>
-        and download
-        <a href="http://www.yss-aya.com/aobazero/index_e.html">Latest weight=</a>
+    <li>Descargar<strong></strong>
+        <a href="https://github.com/kobanium/aobazero/releases">exe para CPU</a>
+        y descargar
+        <a href="http://www.yss-aya.com/aobazero/index_e.html">Último peso=</a>
     </li>
-    <li>In the folder
+    <li>En la carpeta
         <strong>aobazero-XX-w64-cpu</strong>
-        make a new folder named
+        crear una nueva carpeta llamada
         <strong>weight-save</strong>
-        and inside it copy-paste the extracted
-        <strong>weight</strong>.
+        y dentro de ella copiar y pegar el
+        <strong>peso</strong> extraído.
     </li>
 </ul>
 <ul>
-    <li>Right-click
+    <li>Hacer clic derecho en
         <strong>aobaz.bat
-        </strong>and select edit. It'll open in Notepad and change the bold numbers of the last line:
+        </strong>y seleccionar editar. Se abrirá en el Bloc de notas y cambiar los números en negrita de la
+        última línea:
     </li>
     <ul>
         <li>bin\aobaz -q -i -p 100 -h 1 -w weight-save\w00000000<strong>2184</strong>.txt</li>
-        <li>To match the number of w00000000<span style="color:paleturquoise;">####
-            </span>.txt file in your weight-save folder.</li>
+        <li>Para que coincida con el número de archivos w00000000<span style="color:paleturquoise;">####
+            </span>.txt en tu carpeta weight-save.</li>
     </ul>
-    <li>If instructions are unclear AobaZero has an
-        <a href="https://github.com/kobanium/aobazero/blob/release/README_en.md">English
-            README.md</a>
+    <li>Si las instrucciones no son claras, AobaZero tiene un
+        <a href="https://github.com/kobanium/aobazero/blob/release/README_en.md">README.md en inglés</a>
     </li>
-    <li>To increase depth right-click
+    <li>Para aumentar la profundidad, hacer clic derecho en
         <strong>aobaz.bat
-        </strong>and select edit. It'll open in Notepad.
+        </strong>y seleccionar editar. Se abrirá en el Bloc de notas.
     </li>
     <ul>
-        <li>Increase by 100 the bold number.</li>
+        <li>Aumentar en 100 el número en negrita.</li>
         <li>bin\aobaz -q -i -p
             <strong>100</strong>
             -h 1 -w weight-save\w00000000<strong>####</strong>.txt
         </li>
     </ul>
-    <li>Go to Game &gt; Engine Manager &gt; Add and select
+    <li>Ir a Juego > Gestor de motores > Agregar y seleccionar
         <strong>aobaz.bat</strong>
     </li>
 </ul>
 <p>
-    <strong>Handicap neural engine:</strong>
+    <strong>Motor de desventaja neuronal:</strong>
     <a href="https://github.com/yssaya/komaochi/releases">AobaKomaochi</a>
 </p>
 <p>
-    <strong>How to Analyze A Game?</strong>
+    <strong>Cómo analizar un juego?</strong>
 </p>
-<p>After finishing a game in 81dojo, click these to copy the KIFU notation text.</p>
-<p>Go back to Shogidokoro, then click Edit &gt; Paste Game (or simply press Ctrl+V).</p>
+<p>Después de terminar un juego en 81dojo, haz clic en estos para copiar el texto de notación KIFU.</p>
+<p>Vuelve a Shogidokoro, luego haz clic en Editar > Pegar Juego (o simplemente presiona Ctrl+V).</p>
 <ul>
-    <li>Go to Game(G) &gt; Analyze Game and click Set and Start</li>
+    <li>Ir a Juego(G) > Analizar Juego y hacer clic en Configurar y Comenzar</li>
 </ul>
 <p>
-    <strong>How the engine evaluates the position</strong>. A positive number means Black is better, while a
-    negative number means White is better.
+    <strong>Cómo evalúa el motor la posición</strong>. Un número positivo significa que Negro está mejor,
+    mientras que un
+    número negativo significa que Blanco está mejor.
 </p>
 <ol>
-    <li>A value of ±1000 or larger means that one side has a clear advantage.</li>
+    <li>Un valor de ±1000 o más grande significa que un lado tiene una clara ventaja.</li>
     <li>
-        <strong>Condition</strong>: how the engine evaluates the position, but in words.
+        <strong>Condición</strong>: cómo el motor evalúa la posición, pero en palabras.
     </li>
 </ol>
 <p>
-    <strong>Move eval</strong>: how the engine evaluates the move.
+    <strong>Evaluación del movimiento</strong>: cómo el motor evalúa el movimiento.
 </p>
 <ol>
-    <li>An exclamation point (!) means the engine thinks the move is actually better than its own suggestion.</li>
-    <li>A large circle (O) means the engine agrees with the move.</li>
-    <li>A dot (.) means the move is "inferior", but still very decent.</li>
-    <li>Finally, in order of increasingly worse evaluations:</li>
+    <li>Un signo de exclamación (!) significa que el motor piensa que el movimiento es realmente mejor que su
+        propia sugerencia.</li>
+    <li>Un círculo grande (O) significa que el motor está de acuerdo con el movimiento.</li>
+    <li>Un punto (.) significa que el movimiento es "inferior", pero aún muy decente.</li>
+    <li>Finalmente, en orden de evaluaciones cada vez peores:</li>
     <ol>
         <li>?</li>
-        <li>Dubious move ?</li>
-        <li>Bad move ??</li>
+        <li>Movimiento dudoso ?</li>
+        <li>Movimiento malo ??</li>
     </ol>
 </ol>
 <ol>
     <li>
-        <strong>Diff</strong>: the jump in value from the previous position.
+        <strong>Diferencia</strong>: el salto en valor desde la posición anterior.
     </li>
     <li>
-        <strong>Candidate</strong>: engine's suggested move.
+        <strong>Candidato</strong>: movimiento sugerido por el motor.
     </li>
     <li>
-        <strong>Moves</strong>: the sequence of moves that engine sees as best for both sides.
+        <strong>Movimientos</strong>: la secuencia de movimientos que el motor ve como la mejor para ambos
+        lados.
     </li>
 </ol>
 <p>
-    <strong>Tips on using an engine</strong>
+    <strong>Consejos para usar un motor</strong>
 </p>
 <ol>
-    <li>As a beginner, focus more on large spikes in the evaluation. If you are Sente, and you played a move that
-        reduces the evaluation from 200 to -200, relax. It's still even. But a drop from 200 to -1000 is worth
-        looking into.</li>
+    <li>Como principiante, concéntrate más en los grandes picos en la evaluación. Si eres Sente y has jugado un
+        movimiento que
+        reduce la evaluación de 200 a -200, relájate. Todavía está parejo. Pero una caída de 200 a -1000 vale la
+        pena investigar.</li>
 </ol>
 </body>
 
