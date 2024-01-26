@@ -3,10 +3,16 @@ body {
     color: white;
 }
 
-#meijin,
-#ryuo,
-#div1 {
+#meijin {
     counter-reset: rowNumber -2;
+}
+
+#ryuo {
+    counter-reset: rowNumber -3;
+}
+
+#div1 {
+    counter-reset: rowNumber -4;
 }
 
 #meijin tr,

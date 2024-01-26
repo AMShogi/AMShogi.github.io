@@ -8,6 +8,23 @@ h1 {
     text-align: center;
 }
 
+#shogi {
+    counter-reset: rowNumber;
+}
+
+#otros {
+    counter-reset: rowNumber -2;
+}
+
+#shogi tr:not(:first-child), #otros tr {
+    counter-increment: rowNumber;
+}
+
+
+#shogi tr td:first-child::before, #otros tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
 table {
     border-collapse: collapse;
     text-align: center;
