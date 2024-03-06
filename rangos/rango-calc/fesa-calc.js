@@ -1,48 +1,48 @@
 const K_FACTORS = [
-    [720, 40],
-    [1040, 36],
-    [1280, 32],
-    [1560, 28],
-    [1920, 24],
-    [2240, 20],
-    [9999, 16]
+    { threshold: 720, factor: 40 },
+    { threshold: 1040, factor: 36 },
+    { threshold: 1280, factor: 32 },
+    { threshold: 1560, factor: 28 },
+    { threshold: 1920, factor: 24 },
+    { threshold: 2240, factor: 20 },
+    { threshold: 9999, factor: 16 }
 ];
 
-function getElo(tr, games, results) {
-    for (const [r, kr] of K_FACTORS) {
-        if (tr < r) {
-            const k = kr;
-            let change = 0;
-            for (const [or_, res] of results) {
-                const ev = 1 / (1 + 10 ** ((or_ - tr) / 400));
-                change += k * Math.max(res - ev, (or_ - tr) / 160 * (res === 1 ? 1 : -ev));
-                if (games < 100) {
-                    change += Math.max(1800 - tr, 0) / 200;
+function getElo(playerRating, numGames, results) {
+    for (const { threshold, factor } of K_FACTORS) {
+        if (playerRating < threshold) {
+            let k = factor;
+            let ratingChange = 0;
+            for (const [opponentRating, result] of results) {
+                const expectedValue = 1 / (1 + 10 ** ((opponentRating - playerRating) / 400));
+                ratingChange += k * Math.max(result - expectedValue, (opponentRating - playerRating) / 160 * (result === 1 ? 1 : -expectedValue));
+                if (numGames < 100) {
+                    ratingChange += Math.max(1800 - playerRating, 0) / 200;
                 }
             }
-            return Math.round(tr + change);
+            return Math.round(playerRating + ratingChange);
         }
     }
     throw new Error("Invalid rating");
 }
 
-function fesa_calc() {
+function calcRating() {
     try {
-        const myElo = parseInt(prompt("Player rating:"));
+        const playerRating = parseInt(prompt("Player rating:"));
         const numOpponents = parseInt(prompt("Number of games:"));
         const results = [];
 
         for (let i = 0; i < numOpponents; i++) {
-            const oppElo = parseInt(prompt("Opponent's rating:"));
-            const result = parseInt(prompt("Result (1 for win, 0 for loss):"));
-            results.push([oppElo, result]);
+            const opponentRating = parseInt(prompt("Oponente rating:"));
+            const result = parseInt(prompt("Enter result (1 for win, 0 for loss):"));
+            results.push([opponentRating, result]);
         }
 
-        const newElo = getElo(myElo, numOpponents, results);
-        document.getElementById('rating').textContent = `Nuevo rating: ${newElo}`;
+        const newRating = getElo(playerRating, numOpponents, results);
+        document.getElementById('rating').textContent = `Nuevo rating: ${newRating}`;
     } catch (error) {
         alert("Please enter positive integers.");
     }
 }
 
-fesa_calc();
+calcRating();
