@@ -11,13 +11,8 @@ body {
     counter-reset: rowNumber -3;
 }
 
-#div1 {
-    counter-reset: rowNumber -4;
-}
-
 #meijin tr,
-#ryuo tr,
-#div1 tr {
+#ryuo tr {
     counter-increment: rowNumber;
 }
 
