@@ -28,20 +28,20 @@ function getElo(playerRating, numGames, results) {
 
 function calcRating() {
     try {
-        const playerRating = parseInt(prompt("Player rating:"));
-        const numOpponents = parseInt(prompt("Number of games:"));
+        const playerRating = parseInt(prompt("Jugador rating:"));
+        const numOpponents = parseInt(prompt("Partidas jugadas:"));
         const results = [];
 
         for (let i = 0; i < numOpponents; i++) {
             const opponentRating = parseInt(prompt("Oponente rating:"));
-            const result = parseInt(prompt("Enter result (1 for win, 0 for loss):"));
+            const result = parseInt(prompt("Resultado (1 para victoria y 0 para derrota):"));
             results.push([opponentRating, result]);
         }
 
         const newRating = getElo(playerRating, numOpponents, results);
         document.getElementById('rating').textContent = `Nuevo rating: ${newRating}`;
     } catch (error) {
-        alert("Please enter positive integers.");
+        alert("Solo numeros son aceptados.");
     }
 }
 
