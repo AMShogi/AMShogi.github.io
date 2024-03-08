@@ -34,7 +34,7 @@ function calcRating() {
 
         for (let i = 0; i < numOpponents; i++) {
             const opponentRating = parseInt(prompt("Oponente rating:"));
-            const result = parseInt(prompt("Resultado (1 para victoria y 0 para derrota):"));
+            const result = parseInt(prompt("Resultado (1 victoria y 0 derrota):"));
             results.push([opponentRating, result]);
         }
 
