@@ -1,4 +1,4 @@
-let gera_promo = 1
+// let gera_promo = 1
 let marc_promo = -1
 // let LMpromo =
 
