@@ -1,3 +1,11 @@
+const LC_inflation = 200
+
+let LMchess = 1802 - LC_inflation
+let gera_chess = 1727 - LC_inflation
+
+document.getElementById('LMchess').innerHTML = LMchess
+document.getElementById('gera_chess').innerHTML = gera_chess
+
 // https://www.w3schools.com/howto/howto_js_sort_table.asp
 
 function sortTable(n) {
