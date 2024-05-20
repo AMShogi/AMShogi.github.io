@@ -10,7 +10,7 @@ h1 {
 a:link,
 a:visited {
     color: paleturquoise;
-    text-decoration: none; /* Added to remove default underline */
+    text-decoration: none;
 }
 
 a:hover {
