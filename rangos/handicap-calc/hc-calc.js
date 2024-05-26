@@ -1,6 +1,4 @@
-'use strict'
-
-function handicap_input(text) {
+function handicap_calc(text) {
     let rankInput = text.toLowerCase();
     let rank = Number.parseInt(rankInput);    
 
@@ -49,9 +47,9 @@ function handicap_input(text) {
     }
 }
 
-function handicap_calc() {
-    let p1 = handicap_input(document.getElementById('p1').value)
-    let p2 = handicap_input(document.getElementById('p2').value)
+function handicap_input() {
+    let p1 = handicap_calc(document.getElementById('p1').value)
+    let p2 = handicap_calc(document.getElementById('p2').value)
 
     let uwate
     let shitate
