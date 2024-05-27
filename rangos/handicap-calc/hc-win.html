@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganar Handicap</title>
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.png">
+    <link rel="stylesheet" href="/rangos/styles.css">
+    <base target="_blank">
+</head>
+
+<body>
+<p style="text-align:center;"><a href="/index.html"><img src="/favicon/favicon.png" alt="Página Principal"></a>
+</p>
+
+<h1>Shogi Handicap</h1>
+<h2 style="text-align: left;">Rango para ganar Handicap</h2>
+
+<p style="margin-bottom: 3px;">v0.1</p>
+
+<label for="sensei">Sensei rango:</label><br>
+<input type="text" id="sensei" name="sensei" maxlength='3' required>
+<br>
+<label for="hc">Handicap:</label><br>
+<input type="text" id="hc" name="hc" maxlength='3' required><br>
+
+<button onclick="handicap_input()">Calcular</button>
+
+<p id='demo'></p>
+<p id='handicap'>Hándicap:</p>
+
+<script src="hc-win.js"></script>
+</body>
+</html>

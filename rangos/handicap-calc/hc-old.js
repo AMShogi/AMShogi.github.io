@@ -1,20 +1,18 @@
-'use strict'
-
 function handicap_input(text) {
     let rank_input = text.toLowerCase()
     let rank = Number.parseInt(rank_input)
 
     try {
-        if (text == '') {
-            throw 'No pusiste nada -_-'
-        }
-        if (rank < 1) {
-            throw 'Negativos no son aceptados. Tampoco zero'
-        }
-        if (rank_input.includes('d') == false && rank_input.includes('b') == false
-            && rank_input.includes('k') == false) {
-            throw 'Por favor incluye d, k o b de beginner.'
-        }
+        // if (text == '') {
+        //     throw 'No pusiste nada -_-'
+        // }
+        // if (rank < 1) {
+        //     throw 'Negativos no son aceptados. Tampoco zero'
+        // }
+        // if (rank_input.includes('d') == false && rank_input.includes('b') == false
+        //     && rank_input.includes('k') == false) {
+        //     throw 'Por favor incluye d, k o b de beginner.'
+        // }
         if (rank_input.includes('d')) {
             if (rank > 9) {
                 throw '>9d no existe.'
