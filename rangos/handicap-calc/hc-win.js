@@ -7,6 +7,12 @@ function rank_need(text) {
     if (sensei_input.includes('d')) {
         return rank += 14
     }
+
+    if (sensei_input.includes('k') && rank > 15) {
+        return (rank - 15) * -1
+    } else if (sensei_input.includes('k')) {
+        return Math.abs(rank - 15)
+    }
 }
 
 function handicap_input() {
