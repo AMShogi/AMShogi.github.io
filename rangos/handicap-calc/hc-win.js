@@ -34,15 +34,17 @@ function handicap_input() {
         "14,15": "Naked King",
     }
 
-    let handicap = document.getElementById('hc').value
-    function toTitleCase() {
-        return str.split(' ').map(word => {
+    let handicap = document.getElementById('h').value
+    function toTitleCase(str) {
+        if (!str) return str; // Handle empty string
+        return str.split(/\s+/).map(word => {
             return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
         }).join(' ');
     }
-    toTitleCase(handicap)
+    hc_titlecase = toTitleCase(handicap)
+
     for (const [key, value] of Object.entries(handicap_dict)) {
-        if (value.includes(handicap)) {
+        if (value.includes(hc_titlecase)) {
             document.getElementById('rank_need').innerHTML = key
         }
     }
