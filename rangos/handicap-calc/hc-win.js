@@ -25,13 +25,26 @@ function handicap_input() {
         "3": "Bishop",
         "4": "Rook",
         "5": "Rook + Lance",
-        "6,7": "2-Piezas",
-        "8,9": "4-Piezas",
-        "10": "6-Piezas",
-        "11": "8-Piezas",
-        "12": "10-Piezas",
+        "6,7": "2 Piezas",
+        "8,9": "4 Piezas",
+        "10": "6 Piezas",
+        "11": "8 Piezas",
+        "12": "10 Piezas",
         "13": "3 Pawns",
         "14,15": "Naked King",
+    }
+
+    let handicap = document.getElementById('hc').value
+    function toTitleCase() {
+        return str.split(' ').map(word => {
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }).join(' ');
+    }
+    toTitleCase(handicap)
+    for (const [key, value] of Object.entries(handicap_dict)) {
+        if (value.includes(handicap)) {
+            document.getElementById('rank_need').innerHTML = key
+        }
     }
 
     document.getElementById('demo').innerHTML = sensei
