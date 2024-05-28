@@ -35,6 +35,8 @@ function handicap_input() {
     }
 
     let handicap = document.getElementById('h').value
+    // if input 0 then 10-piece
+
     function toTitleCase(str) {
         if (!str) return str; // Handle empty string
         return str.split(/\s+/).map(word => {
