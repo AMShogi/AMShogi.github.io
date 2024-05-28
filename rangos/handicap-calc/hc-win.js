@@ -45,9 +45,9 @@ function handicap_input() {
 
     for (const [key, value] of Object.entries(handicap_dict)) {
         if (value.includes(hc_titlecase)) {
-            document.getElementById('rank_need').innerHTML = key
+            document.getElementById('rank_need').innerHTML = 'Rango para ganar: ' + key
         }
     }
 
-    document.getElementById('demo').innerHTML = sensei
+    document.getElementById('demo').innerHTML = 'Numero rango: ' + sensei
 }
