@@ -29,18 +29,19 @@ function handicap_input() {
         "11": "8",
         "12": "10",
         "13": "3p",
-        "14,15": "nk",
+        "15": "nk",
     }
 
     let handicap = (document.getElementById('h').value).toLowerCase()
 
-    // function toTitleCase(str) {
-    //     if (!str) return str; // Handle empty string
-    //     return str.split(/\s+/).map(word => {
-    //         return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    //     }).join(' ');
-    // }
-    // hc_titlecase = toTitleCase(handicap)
+    try {
+        if (parseInt(handicap) < 1) {
+            throw 'Negativos no son aceptados. Tampoco zero'
+        }
+    }
+    catch (err) {
+        alert(err)
+    }
 
     let handicap_key;
     for (const [key, value] of Object.entries(handicap_dict)) {
@@ -53,7 +54,10 @@ function handicap_input() {
     // let rank_num = (sensei - rank_key)
     let result = document.getElementById('win');
     let rank_ver = document.getElementById('rank_dif')
-    if ((sensei - handicap_key) >= 15 || (sensei - handicap_key) == 14) {
+    if (handicap.includes('nk')) {
+        result.innerHTML = 'Rango para ganar: ' + (Math.abs(sensei - handicap_key - 12)) + '-kyu'
+        rank_ver.innerHTML = 'Rango Diferencia: ' + (sensei - (sensei - handicap_key + 3))
+    } else if ((sensei - handicap_key) >= 15 || (sensei - handicap_key) == 14) {
         result.innerHTML = 'Rango para ganar: ' + (sensei - handicap_key - 13) + '-dan'
         rank_ver.innerHTML = 'Rango Diferencia: ' + (sensei - (sensei - handicap_key + 1))
     } else if ((sensei - handicap_key) < 15) {

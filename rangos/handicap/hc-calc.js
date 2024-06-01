@@ -32,7 +32,7 @@ function handicap_calc(text) {
         }
         if (rankInput.includes('b')) {
             return rank = -5
-        } else if ((rankInput.includes('k') && rank > 15)) {
+        } else if (rankInput.includes('k') && rank > 15) {
             if (rank > 30) {
                 throw '30k es el rango mas bajo.'
             } else {
