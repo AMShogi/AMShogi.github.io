@@ -1,5 +1,5 @@
 // ToDo: script that calculates what rank does kawaii need to beat sensei at X-handicap
-
+// put all declarations on top
 function rank_need(text) {
     let sensei_input = text.toLowerCase()
     let rank = Number.parseInt(sensei_input)
@@ -45,11 +45,22 @@ function handicap_input() {
     }
     hc_titlecase = toTitleCase(handicap)
 
+    let handicap_key;
     for (const [key, value] of Object.entries(handicap_dict)) {
         if (value.includes(hc_titlecase)) {
-            document.getElementById('rank_need').innerHTML = 'Rango para ganar: ' + key
+            handicap_key = parseInt(key)
+            break
         }
     }
 
-    document.getElementById('demo').innerHTML = 'Numero rango: ' + sensei
+    // let rank_num = (sensei - rank_key)
+    let result = document.getElementById('win');
+    let rank_ver = document.getElementById('rank_dif')
+    if ((sensei - handicap_key) < 15) {
+        result.innerHTML = 'Rango para ganar: ' + (Math.abs(sensei - handicap_key - 14)) + '-kyu'
+        rank_ver.innerHTML = 'Rango Diferencia: ' + (sensei - (sensei - handicap_key + 1))
+    } else if ((sensei - handicap_key) >= 15) {
+        result.innerHTML = 'Rango para ganar: ' + (sensei - handicap_key - 13) + '-dan'
+        rank_ver.innerHTML = 'Rango Diferencia: ' + (sensei - (sensei - handicap_key + 1))
+    }
 }
