@@ -1,4 +1,4 @@
-// ToDo: script that calculates what rank does kawaii need to beat sensei at X-handicap
+// 3d + b = 0kyu
 // put all declarations on top
 function rank_need(text) {
     let sensei_input = text.toLowerCase()
@@ -19,19 +19,17 @@ function handicap_input() {
     let sensei = rank_need(document.getElementById('sensei').value)
 
     const handicap_dict = {
-        "0": "No handicap",
-        "1": "Sente",
-        "2": "Lance",
-        "3": "Bishop",
-        "4": "Rook",
-        "5": "Rook + Lance",
-        "6,7": "2 Piezas",
-        "8,9": "4 Piezas",
-        "10": "6 Piezas",
-        "11": "8 Piezas",
-        "12": "10 Piezas",
+        "2": "L",
+        "3": "B",
+        "4": "R",
+        "5": "RL",
+        "6,7": "2",
+        "8,9": "4",
+        "10": "6",
+        "11": "8",
+        "12": "10",
         "13": "3 Pawns",
-        "14,15": "Naked King",
+        "14,15": "NK",
     }
 
     let handicap = document.getElementById('h').value
