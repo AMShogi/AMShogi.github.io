@@ -1,5 +1,5 @@
-// 3d + b = 0kyu
 // put all declarations on top
+// bug if input 0 then 10-piece
 function rank_need(text) {
     let sensei_input = text.toLowerCase()
     let rank = Number.parseInt(sensei_input)
@@ -19,33 +19,32 @@ function handicap_input() {
     let sensei = rank_need(document.getElementById('sensei').value)
 
     const handicap_dict = {
-        "2": "L",
-        "3": "B",
-        "4": "R",
-        "5": "RL",
+        "2": "l",
+        "3": "b",
+        "4": "r",
+        "5": "rl",
         "6,7": "2",
         "8,9": "4",
         "10": "6",
         "11": "8",
         "12": "10",
-        "13": "3 Pawns",
-        "14,15": "NK",
+        "13": "3p",
+        "14,15": "nk",
     }
 
-    let handicap = document.getElementById('h').value
-    // if input 0 then 10-piece
+    let handicap = (document.getElementById('h').value).toLowerCase()
 
-    function toTitleCase(str) {
-        if (!str) return str; // Handle empty string
-        return str.split(/\s+/).map(word => {
-            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-        }).join(' ');
-    }
-    hc_titlecase = toTitleCase(handicap)
+    // function toTitleCase(str) {
+    //     if (!str) return str; // Handle empty string
+    //     return str.split(/\s+/).map(word => {
+    //         return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    //     }).join(' ');
+    // }
+    // hc_titlecase = toTitleCase(handicap)
 
     let handicap_key;
     for (const [key, value] of Object.entries(handicap_dict)) {
-        if (value.includes(hc_titlecase)) {
+        if (value.includes(handicap)) {
             handicap_key = parseInt(key)
             break
         }
@@ -54,11 +53,11 @@ function handicap_input() {
     // let rank_num = (sensei - rank_key)
     let result = document.getElementById('win');
     let rank_ver = document.getElementById('rank_dif')
-    if ((sensei - handicap_key) < 15) {
-        result.innerHTML = 'Rango para ganar: ' + (Math.abs(sensei - handicap_key - 14)) + '-kyu'
-        rank_ver.innerHTML = 'Rango Diferencia: ' + (sensei - (sensei - handicap_key + 1))
-    } else if ((sensei - handicap_key) >= 15) {
+    if ((sensei - handicap_key) >= 15 || (sensei - handicap_key) == 14) {
         result.innerHTML = 'Rango para ganar: ' + (sensei - handicap_key - 13) + '-dan'
+        rank_ver.innerHTML = 'Rango Diferencia: ' + (sensei - (sensei - handicap_key + 1))
+    } else if ((sensei - handicap_key) < 15) {
+        result.innerHTML = 'Rango para ganar: ' + (Math.abs(sensei - handicap_key - 14)) + '-kyu'
         rank_ver.innerHTML = 'Rango Diferencia: ' + (sensei - (sensei - handicap_key + 1))
     }
 }
