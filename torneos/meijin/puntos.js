@@ -33,9 +33,7 @@ async function fetchData() {
                 }
             });
 
-            if (typeof pointsColumnIndex === 'undefined') {
-                continue;
-            }
+            if (typeof pointsColumnIndex === 'undefined') continue;
 
             const pointsArray = Array.from(tableRows)
                 .map(row => {
@@ -54,15 +52,14 @@ async function fetchData() {
             });
 
             const matchRows = Array.from(doc.querySelectorAll('table tr'))
-                .map(row => row.innerText.trim())
-                .filter(text => text.includes('Kifu'))
+                .filter(row => row.innerHTML.includes('Kifu'))
                 .slice(0, 2)
-                .map(text => {
-                    // Remove the year and following hyphen, and 'Game', add spaces
-                    let newText = text.replace(/\b\d{4}-\b/, '').replace('Game', '');
-                    // Ensure there is a space between the date and the player name, and before 'Kifu'
-                    newText = newText.replace(/(\d{2}-\d{2})([^\s])/g, '$1 $2').replace('Kifu', ' Kifu');
-                    return newText.replace('Kifu', '<a href="#">Kifu</a>').replace(/\s{2,}/g, ' ').trim();
+                .map(row => {
+                    let text = row.innerText.trim();
+                    let link = row.querySelector('a[href*="kifu"]')?.getAttribute('href') || '#';
+                    text = text.replace(/\b\d{4}-\b/, '').replace('Game', '');
+                    text = text.replace(/(\d{2}-\d{2})([^\s])/g, '$1 $2').replace('Kifu', ' Kifu');
+                    return text.replace(' Kifu', ` <a href="${link}">Kifu</a>`).replace(/\s{2,}/g, ' ').trim();
                 });
 
             if (matchRows.length === 2) {
@@ -77,7 +74,7 @@ async function fetchData() {
 
 document.addEventListener('DOMContentLoaded', fetchData);
 
-
+// Sort
 document.addEventListener('DOMContentLoaded', () => {
     const tables = document.querySelectorAll('table');
 
@@ -101,7 +98,7 @@ function sortTableByPuntos(table) {
     sortedRows.forEach(row => table.appendChild(row));
 }
 
-
+// Promo calc
 // let gera_promo = 1
 let marc_promo = -1
 // let LMpromo =
