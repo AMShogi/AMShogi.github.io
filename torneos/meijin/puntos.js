@@ -19,8 +19,6 @@ async function fetchData() {
             const doc = parser.parseFromString(data.contents, 'text/html');
             const tableRows = doc.querySelectorAll('table tr');
 
-            console.log(`Fetched data for table ${tableClasses[i]}:`, tableRows);
-
             let pointsColumnIndex;
             const headerCells = tableRows[0].querySelectorAll('th');
             headerCells.forEach((cell, index) => {
@@ -30,7 +28,6 @@ async function fetchData() {
             });
 
             if (typeof pointsColumnIndex === 'undefined') {
-                console.error(`Points column not found for table ${tableClasses[i]}`);
                 continue;
             }
 
@@ -41,8 +38,6 @@ async function fetchData() {
                 })
                 .filter(points => points !== '');
 
-            console.log(`Points array for table ${tableClasses[i]}:`, pointsArray);
-
             const myTableRows = document.querySelectorAll(`.${tableClasses[i]} tr`);
             let pointsIndex = 0;
             myTableRows.forEach((row, rowIndex) => {
@@ -51,8 +46,6 @@ async function fetchData() {
                     cells[4].innerText = pointsArray[pointsIndex++];
                 }
             });
-
-            console.log(`Updated table ${tableClasses[i]}`);
         }
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -62,7 +55,7 @@ async function fetchData() {
 window.onload = fetchData;
 
 
-let gera_promo = 1
+// let gera_promo = 1
 let marc_promo = -1
 // let LMpromo =
 
