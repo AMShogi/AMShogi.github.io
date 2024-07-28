@@ -6,6 +6,11 @@ async function fetchData() {
         'https%3A%2F%2Fsystem.81dojo.com%2Fen%2Ftournaments%2F4664'
     ];
     const tableClasses = ['meijinA', 'meijinB', 'meijinC'];
+    const paragraphIds = [
+        ['a1', 'a2'],
+        ['b1', 'b2'],
+        ['c1', 'c2']
+    ];
 
     try {
         for (let i = 0; i < targetUrls.length; i++) {
@@ -19,6 +24,7 @@ async function fetchData() {
             const doc = parser.parseFromString(data.contents, 'text/html');
             const tableRows = doc.querySelectorAll('table tr');
 
+            // Find the correct column index for points
             let pointsColumnIndex;
             const headerCells = tableRows[0].querySelectorAll('th');
             headerCells.forEach((cell, index) => {
@@ -46,13 +52,30 @@ async function fetchData() {
                     cells[4].innerText = pointsArray[pointsIndex++];
                 }
             });
+
+            const matchRows = Array.from(doc.querySelectorAll('table tr'))
+                .map(row => row.innerText.trim())
+                .filter(text => text.includes('Kifu'))
+                .slice(0, 2)
+                .map(text => {
+                    // Remove the year and following hyphen, and 'Game', add spaces
+                    let newText = text.replace(/\b\d{4}-\b/, '').replace('Game', '');
+                    // Ensure there is a space between the date and the player name, and before 'Kifu'
+                    newText = newText.replace(/(\d{2}-\d{2})([^\s])/g, '$1 $2').replace('Kifu', ' Kifu');
+                    return newText.replace('Kifu', '<a href="#">Kifu</a>').replace(/\s{2,}/g, ' ').trim();
+                });
+
+            if (matchRows.length === 2) {
+                document.getElementById(paragraphIds[i][0]).innerHTML = matchRows[0];
+                document.getElementById(paragraphIds[i][1]).innerHTML = matchRows[1];
+            }
         }
     } catch (error) {
         console.error('Error fetching data:', error);
     }
 }
 
-window.onload = fetchData;
+document.addEventListener('DOMContentLoaded', fetchData);
 
 
 // let gera_promo = 1
