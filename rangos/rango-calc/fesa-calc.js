@@ -26,7 +26,8 @@ function getElo(tr, games, results) {
         if (++iterationCount > 10) break;
 
         const ev = 1 / (1 + Math.pow(10, (or_ - tr) / 400));
-        change += k * Math.max(res - ev, (or_ - tr) / 160 * (res === 1 ? 1 : -1));
+        // Correct handling for result: 1 for win, 0 for loss
+        change += k * (res - ev);
         if (games < 100) {
             change += Math.max(1800 - tr, 0) / 200;
         }
@@ -44,8 +45,11 @@ function updateElo() {
         const oppelo = parseInt(prompt("Opponent Elo: "), 10);
         if (isNaN(oppelo)) break;
 
-        const result = parseInt(prompt("Result: "), 10);
-        if (isNaN(result)) break;
+        const result = parseInt(prompt("Result (1 for win, 0 for loss): "), 10);
+        if (isNaN(result) || (result !== 0 && result !== 1)) {
+            alert("Invalid result input. Please enter 0 or 1.");
+            continue;
+        }
 
         results.push([oppelo, result]);
     }
@@ -59,4 +63,5 @@ function updateElo() {
 }
 
 // Initialize the Elo update process
-updateElo();
+up
+    dateElo();
