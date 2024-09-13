@@ -1,48 +1,55 @@
 const K_FACTORS = [
-    { threshold: 720, factor: 40 },
-    { threshold: 1040, factor: 36 },
-    { threshold: 1280, factor: 32 },
-    { threshold: 1560, factor: 28 },
-    { threshold: 1920, factor: 24 },
-    { threshold: 2240, factor: 20 },
-    { threshold: 9999, factor: 16 }
+    [720, 40],
+    [1040, 36],
+    [1280, 32],
+    [1560, 28],
+    [1920, 24],
+    [2240, 20],
+    [9999, 16]
 ];
 
-function getElo(playerRating, numGames, results) {
-    for (const { threshold, factor } of K_FACTORS) {
-        if (playerRating < threshold) {
-            let k = factor;
-            let ratingChange = 0;
-            for (const [opponentRating, result] of results) {
-                const expectedValue = 1 / (1 + 10 ** ((opponentRating - playerRating) / 400));
-                ratingChange += k * Math.max(result - expectedValue, (opponentRating - playerRating) / 160 * (result === 1 ? 1 : -expectedValue));
-                if (numGames < 100) {
-                    ratingChange += Math.max(1800 - playerRating, 0) / 200;
-                }
-            }
-            return Math.round(playerRating + ratingChange);
+function getElo(tr, games, results) {
+    let k;
+    for (const [r, kr] of K_FACTORS) {
+        if (tr < r) {
+            k = kr;
+            break;
         }
     }
-    throw new Error("Invalid rating");
+    if (k === undefined) {
+        throw new Error("Invalid rating");
+    }
+
+    let change = 0;
+    for (const [or_, res] of results) {
+        let ev = 1 / (1 + 10 ** ((or_ - tr) / 400));
+        change += k * Math.max(res - ev, (or_ - tr) / 160, res === 1 ? (or_ - tr) / 160 : -ev);
+        if (games < 100) {
+            change += Math.max(1800 - tr, 0) / 200;
+        }
+    }
+    return Math.round(tr + change);
 }
 
-function calcRating() {
+function main() {
+    let myElo = parseInt(prompt("Jugador Rating: "));
+    let myGames = parseInt(prompt("Partidas jugadas: "));
+    let results = [];
+    
     try {
-        const playerRating = parseInt(prompt("Jugador rating:"));
-        const numOpponents = parseInt(prompt("Partidas jugadas:"));
-        const results = [];
-
-        for (let i = 0; i < numOpponents; i++) {
-            const opponentRating = parseInt(prompt("Oponente rating:"));
-            const result = parseInt(prompt("Resultado (1 victoria y 0 derrota):"));
-            results.push([opponentRating, result]);
+        while (true) {
+            let oppElo = parseInt(prompt("Oponente Elo: "));
+            let result = parseInt(prompt("Victoria 1 y Derrota 0: "));
+            results.push([oppElo, result]);
         }
-
-        const newRating = getElo(playerRating, numOpponents, results);
-        document.getElementById('rating').textContent = `Nuevo rating: ${newRating}`;
-    } catch (error) {
-        alert("Solo numeros son aceptados.");
+    } catch (e) {
+        if (!(e instanceof TypeError)) {
+            throw e;
+        }
     }
+
+    alert("New Elo: " + getElo(myElo, myGames, results));
 }
 
-calcRating();
+ma
+    in();
