@@ -9,36 +9,32 @@ const K_FACTORS = [
 ];
 
 function getElo(tr, games, results) {
-    let k;
-    for (const [r, kr] of K_FACTORS) {
-        if (tr < r) {
-            k = kr;
-            break;
-        }
-    }
+    // Determine K-factor based on the player's rating
+    const k = K_FACTORS.find(([r]) => tr < r)?.[1];
     if (k === undefined) {
         throw new Error("Invalid rating");
     }
 
     let change = 0;
-    for (const [or_, res] of results) {
+    results.forEach(([or_, res]) => {
         const ev = 1 / (1 + Math.pow(10, (or_ - tr) / 400));
-        change += k * Math.max(res - ev, (or_ - tr) / 160 if res === 1 else -ev);
+        change += k * (res - ev);
         if (games < 100) {
             change += Math.max(1800 - tr, 0) / 200;
         }
-    }
+    });
+
     return Math.round(tr + change);
 }
 
 function main() {
-    const myelo = parseInt(prompt("Player Elo:"));
-    const mygames = parseInt(prompt("Player games:"));
-    let results = [];
+    const myelo = parseInt(prompt("Player Elo:"), 10);
+    const mygames = parseInt(prompt("Player games:"), 10);
+    const results = [];
 
     for (let i = 0; i < 10; i++) {
-        const oppelo = parseInt(prompt("Opponent Elo:"));
-        const result = parseInt(prompt("Result:"));
+        const oppelo = parseInt(prompt("Opponent Elo:"), 10);
+        const result = parseInt(prompt("Result:"), 10);
         results.push([oppelo, result]);
     }
 
