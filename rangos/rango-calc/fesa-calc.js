@@ -16,14 +16,15 @@ function getElo(tr, games, results) {
             break;
         }
     }
+
     if (k === undefined) {
         throw new Error("Invalid rating");
     }
 
     let change = 0;
     for (const [or_, res] of results) {
-        let ev = 1 / (1 + 10 ** ((or_ - tr) / 400));
-        change += k * Math.max(res - ev, (or_ - tr) / 160, res === 1 ? (or_ - tr) / 160 : -ev);
+        const ev = 1 / (1 + Math.pow(10, (or_ - tr) / 400));
+        change += k * Math.max(res - ev, (or_ - tr) / 160 if res === 1 ? : -ev);
         if (games < 100) {
             change += Math.max(1800 - tr, 0) / 200;
         }
@@ -31,25 +32,25 @@ function getElo(tr, games, results) {
     return Math.round(tr + change);
 }
 
-function main() {
-    let myElo = parseInt(prompt("Jugador Rating: "));
-    let myGames = parseInt(prompt("Partidas jugadas: "));
-    let results = [];
+function updateElo() {
+    const myElo = parseInt(prompt("Player Elo:"));
+    const myGames = parseInt(prompt("Player games:"));
+    const results = [];
+    let oppElo, result;
     
-    try {
-        while (true) {
-            let oppElo = parseInt(prompt("Oponente Elo: "));
-            let result = parseInt(prompt("Victoria 1 y Derrota 0: "));
+    while (true) {
+        try {
+            oppElo = parseInt(prompt("Opponent Elo:"));
+            result = parseInt(prompt("Result:"));
             results.push([oppElo, result]);
-        }
-    } catch (e) {
-        if (!(e instanceof TypeError)) {
-            throw e;
+        } catch {
+            break;
         }
     }
 
-    alert("New Elo: " + getElo(myElo, myGames, results));
+    const newElo = getElo(myElo, myGames, results);
+    document.getElementById('rating').innerText = `Nuevo rating: ${newElo}`;
 }
 
-ma
-    in();
+update
+    Elo();
