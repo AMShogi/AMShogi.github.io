@@ -27,15 +27,16 @@ def main():
     myelo = int(input("Player Elo: "))
     mygames = int(input("Player games: "))
     results = []
-    try:
-        while True:
+    
+    for _ in range(10):  # Loop runs a maximum of 10 times
+        try:
             oppelo = int(input("Opponent Elo: "))
             result = int(input("Result: "))
             results.append((oppelo, result))
-    except ValueError:
-        pass
+        except ValueError:
+            break
+    
     print("New Elo: {}".format(get_elo(myelo, mygames, results)))
-
 
 if __name__ == '__main__':
     main()

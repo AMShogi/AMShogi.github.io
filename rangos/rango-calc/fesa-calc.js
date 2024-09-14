@@ -8,40 +8,44 @@ const K_FACTORS = [
     [9999, 16]
 ];
 
-function getElo(tr, games, results) {
-    // Determine K-factor based on the player's rating
-    const k = K_FACTORS.find(([r]) => tr < r)?.[1];
-    if (k === undefined) {
-        throw new Error("Invalid rating");
-    }
+function getKFactor(rating) {
+    return K_FACTORS.find(([limit]) => rating < limit)[1];
+}
 
-    let change = 0;
-    results.forEach(([or_, res]) => {
-        const ev = 1 / (1 + Math.pow(10, (or_ - tr) / 400));
-        change += k * (res - ev);
-        if (games < 100) {
-            change += Math.max(1800 - tr, 0) / 200;
-        }
-    });
-
-    return Math.round(tr + change);
+function calculateElo(currentElo, gamesPlayed, results) {
+    const k = getKFactor(currentElo);
+    return Math.round(
+        results.reduce((elo, [opponentElo, result]) => {
+            const expectedOutcome = 1 / (1 + Math.pow(10, (opponentElo - elo) / 400));
+            const adjustment = k * (result - expectedOutcome);
+            const gameAdjustment = gamesPlayed < 100 ? Math.max(1800 - elo, 0) / 200 : 0;
+            return elo + adjustment + gameAdjustment;
+        }, currentElo)
+    );
 }
 
 function main() {
-    const myelo = parseInt(prompt("Player Elo:"), 10);
-    const mygames = parseInt(prompt("Player games:"), 10);
+    const playerElo = parseInt(prompt("Player Elo: "), 10);
+    const playerGames = parseInt(prompt("Player games: "), 10);
     const results = [];
 
     for (let i = 0; i < 10; i++) {
-        const oppelo = parseInt(prompt("Opponent Elo:"), 10);
-        const result = parseInt(prompt("Result:"), 10);
-        results.push([oppelo, result]);
+        const opponentEloInput = prompt("Opponent Elo: ");
+        if (opponentEloInput === null || opponentEloInput.trim() === "") break;
+
+        const resultInput = prompt("Result (1 for win, 0 for loss): ");
+        if (resultInput === null || resultInput.trim() === "") break;
+
+        const opponentElo = parseInt(opponentEloInput, 10);
+        const result = parseInt(resultInput, 10);
+
+        if (isNaN(opponentElo) || isNaN(result)) break;
+
+        results.push([opponentElo, result]);
     }
 
-    try {
-        const newElo = getElo(myelo, mygames, results);
-        document.getElementById('rating').textContent = `Nuevo rating: ${newElo}`;
-    } catch (error) {
-        alert(error.message);
-    }
+    const newElo = calculateElo(playerElo, playerGames, results);
+    document.getElementById('rating').textContent = `New Elo: ${newElo}`;
 }
+
+main();
