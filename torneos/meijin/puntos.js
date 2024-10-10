@@ -98,25 +98,29 @@ function sortTableByPuntos(table) {
     sortedRows.forEach(row => table.appendChild(row));
 }
 
-// Promo calc
-// let gera_promo = 1
-let marc_promo = -1
-// let LMpromo =
+function calc_avg(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return (sum / arr.length).toFixed(1);
+}
 
-// document.getElementById('gera').innerHTML = gera_promo
-document.getElementById('marc').innerHTML = marc_promo
-// document.getElementById('LMpromo').innerHTML = LMpromo
+// Clase A
+let gera_avg = (1.2);
+let LMavg = (1.3);
+let marc_avg = (1.4);
+
+document.getElementById('gera_avg').innerHTML = gera_avg;
+document.getElementById('LMavg').innerHTML = LMavg;
+document.getElementById('marc_avg').innerHTML = marc_avg;
 
 // Clase B
-// let incursor_promo =
-let drlennon_promo = 1
-// let Gisari_promo = -1
+let lennon_promo = 1;
+let ronin_avg = calc_avg([2, 1.7]);
 
-document.getElementById('drlennon').innerHTML = drlennon_promo
-// document.getElementById('Gisari').innerHTML = Gisari_promo
-// document.getElementById('incursor').innerHTML = incursor_promo
+document.getElementById('lennon').innerHTML = lennon_promo;
+document.getElementById('ronin_avg').innerHTML = ronin_avg;
 
 // Clase C
-// let angy_promo = 1
-
-// document.getElementById('angy').innerHTML = angy_promo
+// let Gisari_promo
