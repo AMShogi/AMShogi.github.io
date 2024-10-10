@@ -7,9 +7,9 @@ function calc_avg(arr) {
 }
 
 // Clase A
-let gera_avg = (1.2);
-let LMavg = (1.3);
-let marc_avg = (1.4);
+let gera_avg = calc_avg([1.2]);
+let LMavg = calc_avg([1.3]);
+let marc_avg = calc_avg([1.4]);
 
 document.getElementById('gera_avg').innerHTML = gera_avg;
 document.getElementById('LMavg').innerHTML = LMavg;
@@ -17,9 +17,11 @@ document.getElementById('marc_avg').innerHTML = marc_avg;
 
 // Clase B
 let lennon_promo = 1;
+let lennon_avg = calc_avg([2.2]);
 let ronin_avg = calc_avg([2, 1.7]);
 
 document.getElementById('lennon').innerHTML = lennon_promo;
+document.getElementById('lennon').innerHTML = lennon_avg;
 document.getElementById('ronin_avg').innerHTML = ronin_avg;
 
 // Clase C
