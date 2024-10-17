@@ -3,11 +3,14 @@ body {
     color: white;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
 }
 
-li, label, input {
+li,
+label,
+input {
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -20,7 +23,8 @@ button {
     margin-top: 5px;
 }
 
-table, #hc {
+table,
+#hc {
     border-collapse: collapse;
     text-align: center;
     width: auto;
@@ -29,7 +33,9 @@ table, #hc {
     margin-right: auto;
 }
 
-#hc {margin: 0;}
+#hc {
+    margin: 0;
+}
 
 #alt-colors tr:nth-child(even),
 #hc tr:nth-child(even) {
@@ -37,16 +43,19 @@ table, #hc {
     border: 1px solid white;
 }
 
-th, td {
+th,
+td {
     border: 1px solid white;
 }
 
-a, a:visited {
+a,
+a:visited {
     text-decoration: none;
     color: paleturquoise;
 }
 
-#red a:hover, a:hover {
+#red a:hover,
+a:hover {
     color: red;
 }
 

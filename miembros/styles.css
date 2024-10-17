@@ -16,12 +16,14 @@ h1 {
     counter-reset: rowNumber -2;
 }
 
-#shogi tr:not(:first-child), #otros tr {
+#shogi tr:not(:first-child),
+#otros tr {
     counter-increment: rowNumber;
 }
 
 
-#shogi tr td:first-child::before, #otros tr td:first-child::before {
+#shogi tr td:first-child::before,
+#otros tr td:first-child::before {
     content: counter(rowNumber);
 }
 

@@ -1,6 +1,6 @@
 function handicap_calc(text) {
     let rankInput = text.toLowerCase();
-    let rank = Number.parseInt(rankInput);    
+    let rank = Number.parseInt(rankInput);
 
     let rank_digit = Boolean
     let rank_letter = Boolean
@@ -24,7 +24,7 @@ function handicap_calc(text) {
             throw 'Por favor incluye d, k o b de beginner.'
         }
         if (rankInput.includes('d')) {
-             if (rank > 9) {
+            if (rank > 9) {
                 throw '>9d no existe.'
             } else {
                 return rank += 14

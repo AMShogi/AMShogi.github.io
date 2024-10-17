@@ -28,7 +28,7 @@ table {
     border-collapse: collapse;
     text-align: center;
     width: auto;
-    margin: 0 auto; /* Combined margin-left and margin-right into shorthand */
+    margin: 0 auto;
 }
 
 th,
