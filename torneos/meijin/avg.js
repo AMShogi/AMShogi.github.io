@@ -21,7 +21,7 @@ document.getElementById('marc_avg').innerHTML = marc_avg;
 let incursor_avg = calc([1.5, 2.2]);
 let lennon_promo = 1;
 let lennon_avg = calc([2.2]);
-let ronin_avg = calc([2, 1.7]);
+let ronin_avg = calc([2, 1.6]);
 let yan_avg = calc([3]);
 let zuriel_avg = calc([3]);
 
