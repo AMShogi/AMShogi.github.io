@@ -78,15 +78,10 @@ li {
 
 /* Slideshow container */
 .slideshow-container {
-    max-height: 500px;
-    max-width: 500px;
-    position: relative;
-    margin: auto;
-}
-
-.slideshow-container img {
-    width: 50%;
+    max-width: 30%;
     height: auto;
+    position: relative;
+    margin-left: 0;
 }
 
 /* Hide the images by default */
@@ -126,7 +121,7 @@ li {
 /* Caption text */
 .text {
     color: #f2f2f2;
-    font-size: 15px;
+    font-size: 20px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
