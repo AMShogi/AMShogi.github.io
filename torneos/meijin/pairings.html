@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shogi Round-Robin</title>
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.png">
+    <link rel="stylesheet" href="/torneos/styles.css">
+    <base target="_blank">
+</head>
+
+<body>
+    <p style="text-align:center"><a href="/index.html"><img src="/favicon/favicon.png" alt="Pagina Principal"></a>
+    </p>
+    <h1>Shogi Pairings Generator</h1>
+    <label for="numPlayers">Number of Players:</label>
+    <input type="number" id="numPlayers" min="2" value="6">
+    <button onclick="generatePairings()">Generate Pairings</button>
+
+    <div id="output"></div>
+
+    <script src="pares.js"></script>
+</body>
+
+</html>
