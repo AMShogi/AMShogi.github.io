@@ -39,10 +39,19 @@ document.getElementById('gisari_avg').innerHTML = gisari_avg;
 document.getElementById('grcajsf_avg').innerHTML = grcajsf_avg;
 
 // <tr>
-//     <td></td>
-//     <td>Incursor</td>
-//     <td>2-dan</td>
-//     <td id="incursor"></td>
-//     <td></td>
-//     <td id="incursor_avg"></td>
+//  <td></td>
+//  <td>Incursor</td>
+//  <td>2-dan</td>
+//  <td id="incursor"></td>
+//  <td></td>
+//  <td id="incursor_avg"></td>
+// </tr>
+
+// <tr>
+//  <td></td>
+//  <td>grcajsf</td>
+//  <td>7-kyu</td>
+//  <td></td>
+//  <td></td>
+//  <td id="grcajsf_avg"></td>
 // </tr>
