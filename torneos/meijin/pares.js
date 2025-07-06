@@ -1,21 +1,23 @@
+// Fisher-Yates shuffle
 function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+  return array
+    .map(value => [Math.random(), value])
+    .sort(([a], [b]) => a - b)
+    .map(([, value]) => value);
 }
 
-Array.prototype.rotateRight = function () {
-  return [this[this.length - 1]].concat(this.slice(0, this.length - 1));
-};
+// Helper: rotate array to the right (excluding first item)
+function rotateRight(array) {
+  return [array[0], array[array.length - 1], ...array.slice(1, -1)];
+}
 
+// Generate all round-robin rounds
 function generateRoundRobin(players) {
-  const rounds = [];
   const numRounds = players.length - 1;
   const half = players.length / 2;
+  const rounds = [];
 
-  let rotation = players.slice();
+  let rotation = [...players];
 
   for (let r = 0; r < numRounds; r++) {
     const round = [];
@@ -24,20 +26,21 @@ function generateRoundRobin(players) {
       const p2 = rotation[rotation.length - 1 - i];
       round.push([p1, p2]);
     }
-    rounds.push(round);
-    rotation = [rotation[0]].concat(rotation.slice(1).rotateRight());
+    rounds.push(shuffle(round)); // Randomize match order in each round
+    rotation = rotateRight(rotation);
   }
 
-  return shuffle(rounds).map(shuffle);
+  return shuffle(rounds); // Randomize round order
 }
 
+// DOM interaction
 function generatePairings() {
   const num = parseInt(document.getElementById("numPlayers").value);
   const output = document.getElementById("output");
   output.innerHTML = "";
 
   if (num < 2 || num % 2 !== 0) {
-    output.textContent = "Please enter an even number of players (2 or more).";
+    output.textContent = "Please enter an even number.";
     return;
   }
 
@@ -46,10 +49,8 @@ function generatePairings() {
 
   rounds.forEach((round, i) => {
     const div = document.createElement("div");
-    div.innerHTML = `Round ${i + 1}:<br>`;
-    round.forEach(match => {
-      div.innerHTML += `${match[0]} vs ${match[1]}<br>`;
-    });
+    div.innerHTML = `Round ${i + 1}:<br>` +
+      round.map(([p1, p2]) => `${p1} vs ${p2}`).join("<br>");
     output.appendChild(div);
     output.appendChild(document.createElement("br"));
   });
