@@ -132,6 +132,9 @@ li {
 textarea {
   font-size: 14px;
   width: 200px;
+  margin: 5px;
+  background-color: black;
+  color: aliceblue;
 }
 
 /* input[type="number"] {
