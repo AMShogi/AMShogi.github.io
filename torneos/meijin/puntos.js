@@ -1,9 +1,9 @@
 async function fetchData() {
     const proxyUrl = 'https://api.allorigins.win/get?url=';
     const targetUrls = [
-        'https%3A%2F%2Fsystem.81dojo.com%2Fen%2Ftournaments%2F4662',
-        'https%3A%2F%2Fsystem.81dojo.com%2Fen%2Ftournaments%2F4663',
-        'https%3A%2F%2Fsystem.81dojo.com%2Fen%2Ftournaments%2F4664'
+        'https%3A%2F%2Fsystem.81dojo.com%2Fen%2Ftournaments%2F5171',
+        'https%3A%2F%2Fsystem.81dojo.com%2Fen%2Ftournaments%2F5172',
+        'https%3A%2F%2Fsystem.81dojo.com%2Fen%2Ftournaments%2F5173'
     ];
     const tableClasses = ['meijinA', 'meijinB', 'meijinC'];
     const paragraphIds = [
