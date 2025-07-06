@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    color: white;
+    color: aliceblue;
 }
 
 h1,
@@ -51,7 +51,7 @@ td {
 a,
 a:visited {
     text-decoration: none;
-    color: paleturquoise;
+    color: lightsalmon;
 }
 
 #red a:hover,

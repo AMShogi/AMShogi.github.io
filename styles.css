@@ -4,7 +4,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    color: white;
+    color: aliceblue;
 }
 
 h1,
@@ -28,7 +28,7 @@ a:hover {
 
 a,
 a:visited {
-    color: white;
+    color: aliceblue;
 }
 
 .navbar {
@@ -51,7 +51,7 @@ a:visited {
 
 .dropdown .dropbtn {
     background-color: green;
-    color: white;
+    color: aliceblue;
     padding: 5px;
     font-size: 18px;
     font-family: initial;
@@ -75,7 +75,7 @@ a:visited {
 .dropdown-content a {
     float: none;
     background-color: black;
-    color: white;
+    color: aliceblue;
     padding: 5px;
     text-decoration: none;
     display: block;

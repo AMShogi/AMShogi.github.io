@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    color: white;
+    color: aliceblue;
 }
 
 h1 {
@@ -9,7 +9,7 @@ h1 {
 
 a:link,
 a:visited {
-    color: paleturquoise;
+    color: lightsalmon;
     text-decoration: none;
 }
 

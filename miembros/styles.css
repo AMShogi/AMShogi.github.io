@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    color: white;
+    color: aliceblue;
     white-space: nowrap;
 }
 
@@ -51,7 +51,7 @@ tr:nth-child(even) {
 
 a,
 a:visited {
-    color: paleturquoise;
+    color: lightsalmon;
     text-decoration: none;
 }
 
@@ -78,7 +78,7 @@ a:hover {
 .dropdown-content p {
     display: block;
     background-color: black;
-    color: white;
+    color: aliceblue;
     margin: auto;
     border: 1px solid white;
 }
