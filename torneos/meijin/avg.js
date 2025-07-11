@@ -32,17 +32,10 @@ document.getElementById('yan_avg').innerHTML = yan_avg;
 
 // Clase C
 let gisari_avg = calc([2.3]);
-let grcajsf_avg = calc([2.4]);
+let work_avg = calc([3.3]);
+// let grcajsf_avg = calc([2.4]);
 // let Tyrf1ng_avg = calc([])
 
 document.getElementById('gisari_avg').innerHTML = gisari_avg;
-document.getElementById('grcajsf_avg').innerHTML = grcajsf_avg;
-
-// <tr>
-//  <td></td>
-//  <td>grcajsf</td>
-//  <td>7-kyu</td>
-//  <td></td>
-//  <td></td>
-//  <td id="grcajsf_avg"></td>
-// </tr>
+document.getElementById('work_avg').innerHTML = work_avg;
+// document.getElementById('grcajsf_avg').innerHTML = grcajsf_avg;
