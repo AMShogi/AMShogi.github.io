@@ -137,7 +137,6 @@ textarea {
   color: aliceblue;
 }
 
-/* input[type="number"] {
-  width: 50px;
+#outputPair {
   font-size: 16px;
-} */
+}

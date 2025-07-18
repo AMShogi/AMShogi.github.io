@@ -2,24 +2,28 @@
 <html>
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shogi Round Robin</title>
-<link rel="icon" type="image/x-icon" href="/favicon/favicon.png">
-<link rel="stylesheet" href="/torneos/styles.css">
-<base target="_blank">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shogi Round Robin</title>
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.png">
+  <link rel="stylesheet" href="/torneos/styles.css">
+  <base target="_blank">
 </head>
 
 <body>
-<p style="text-align:center"><a href="/index.html"><img src="/favicon/favicon.png" alt="Pagina Principal"></a>
-</p>
-<h1>Shogi Pairings Generator</h1>
+  <p style="text-align:center"><a href="/index.html"><img src="/favicon/favicon.png" alt="Pagina Principal"></a>
+  </p>
+  <h1>Shogi Pairings Generator</h1>
   <label for="playerList">Enter player names (one per line):</label><br>
   <textarea id="playerList" rows="10" cols="30"></textarea><br>
-  <button style="margin-bottom: 10px;" onclick="generatePairings()">Generate Pairings</button>
-  
-  <div id="output"></div>
+  <button onclick="generatePairings()">Generate Plain Text</button>
+  <button style="margin-bottom: 2px;" onclick="pairingsHTML()">HTML</button>
+
+  <pre id="outputPair"></pre>
+  <div id="output_html"></div>
 
   <script src="pares.js"></script>
+  <script src="pares_html.js"></script>
 </body>
+
 </html>
