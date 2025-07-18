@@ -57,7 +57,7 @@ function generatePairings() {
 
   rounds.forEach((round, i) => {
     const roundNumber = rounds.length - i;
-    html += `<h3>Round ${roundNumber}</h3>\n`;
+    html += `<h3>Ronda ${roundNumber}</h3>\n`;
     round.forEach(([p1, p2]) => {
       html += `<p>${p1} vs ${p2}</p>\n`;
     });
