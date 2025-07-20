@@ -33,6 +33,7 @@ table {
     width: auto;
     margin-left: auto;
     margin-right: auto;
+    color: white;
 }
 
 th {
@@ -53,6 +54,11 @@ a,
 a:visited {
     color: lightsalmon;
     text-decoration: none;
+}
+
+table a,
+a:visited {
+    color: aquamarine;
 }
 
 a:hover {
