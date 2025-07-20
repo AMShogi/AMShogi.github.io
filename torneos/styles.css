@@ -26,11 +26,6 @@ h1 {
     text-align: center;
 }
 
-table a,
-a:visited {
-    color: aquamarine;
-}
-
 a,
 a:visited {
     color: lightsalmon;
@@ -52,6 +47,11 @@ table {
     white-space: nowrap;
     margin-left: 1;
     color: white;
+}
+
+table a,
+table a:visited {
+    color: aquamarine;
 }
 
 #teaching {
@@ -139,4 +139,18 @@ textarea {
 
 #outputPair {
     font-size: 16px;
+}
+
+iframe {
+    border: none;
+}
+
+#frameMeijin {
+    width: 410px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* align tops */
 }
