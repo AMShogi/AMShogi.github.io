@@ -62,10 +62,13 @@ async function fetchData() {
                     return text.replace(' Kifu', ` <a href="${link}">Kifu</a>`).replace(/\s{2,}/g, ' ').trim();
                 });
 
-            if (matchRows.length === 2) {
+            if (matchRows.length > 0) {
                 document.getElementById(paragraphIds[i][0]).innerHTML = matchRows[0];
+            }
+            if (matchRows.length > 1) {
                 document.getElementById(paragraphIds[i][1]).innerHTML = matchRows[1];
             }
+
         }
     } catch (error) {
         console.error('Error fetching data:', error);
