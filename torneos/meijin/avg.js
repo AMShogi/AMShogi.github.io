@@ -16,15 +16,13 @@ document.getElementById('LMavg').innerHTML = LMavg;
 document.getElementById('marc_avg').innerHTML = marc_avg;
 
 // Clase B
-let incursor_avg = calc([1.5]);
-let lennon_promo = 1;
-let lennon_avg = calc([2.2]);
-let ronin_avg = calc([2]);
-let yan_avg = calc([3]);
+let incursor_avg = calc([1.5, 2]);
+let lennon_avg = calc([2.2, 2.4]);
+let ronin_avg = calc([2, 2.2]);
+let yan_avg = calc([3, 2.3]);
 // let zuriel_avg = calc([3]);
 
 document.getElementById('incursor_avg').innerHTML = incursor_avg;
-document.getElementById('lennon').innerHTML = lennon_promo;
 document.getElementById('lennon_avg').innerHTML = lennon_avg;
 document.getElementById('ronin_avg').innerHTML = ronin_avg;
 document.getElementById('yan_avg').innerHTML = yan_avg;
