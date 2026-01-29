@@ -149,3 +149,9 @@ iframe {
   display: flex;
   gap: 20px;
 }
+
+div {
+  width: 3px;
+  border: 15px white;
+  margin: 5px;
+}
