@@ -144,8 +144,8 @@ iframe {
 }
 
 #indexBox {
-  width: 200px;
-  border: 2px solid aliceblue;
+  width: 180px;
+  border: 1px solid aliceblue;
   margin-left: 1px;
-  padding: 2px;
+  padding: 3px;
 }
