@@ -35,3 +35,11 @@ tr:nth-child(even) {
     background-color: green;
     border: 1px solid white;
 }
+
+#links a {
+    color: aliceblue;
+}
+
+#links td {
+    padding-right: 5px;
+}
