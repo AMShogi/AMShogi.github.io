@@ -43,3 +43,15 @@ tr:nth-child(even) {
 #links td {
     padding-right: 5px;
 }
+
+#indexBox {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid aliceblue;
+  margin-left: 2px;
+  padding: 4px;
+}
+
+#indexbox p {
+    margin: 1px;
+}

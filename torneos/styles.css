@@ -144,8 +144,14 @@ iframe {
 }
 
 #indexBox {
-  width: 180px;
+  width: fit-content;
+  height: fit-content;
   border: 1px solid aliceblue;
-  margin-left: 1px;
-  padding: 3px;
+  margin-left: 2px;
+  padding: 4px;
+}
+
+#indexbox p {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
