@@ -29,12 +29,7 @@ table,
     text-align: center;
     width: auto;
     white-space: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#hc {
-    margin: 0;
+    margin-left: 3px;
 }
 
 #alt-colors tr:nth-child(even),
@@ -46,6 +41,8 @@ table,
 th,
 td {
     border: 1px solid white;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 a,
