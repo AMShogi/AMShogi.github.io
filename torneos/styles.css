@@ -68,42 +68,39 @@ li {
     margin-top: 5px;
 }
 
-* {
-    box-sizing: border-box
-}
+* {box-sizing: border-box}
+
+img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 40%;
-    height: auto;
-    position: relative;
-    margin-left: 0;
+  max-width: 400px;
+  position: relative;
+  margin: 0;
 }
 
 /* Hide the images by default */
-.mySlides {
-    display: none;
-}
+.mySlides {display: none;}
 
 /* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 20px;
-    color: aliceblue;
-    font-weight: bold;
-    font-size: 24px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 14px;
+  margin-top: -22px;
+  color: yellow;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 0 3px 3px 0;
 }
 
 /* Caption text */
