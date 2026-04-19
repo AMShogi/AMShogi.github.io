@@ -52,6 +52,10 @@ td {
     padding-right: 2px;
 }
 
+tr:hover {
+    background-color: green;
+}
+
 a,
 a:visited {
     text-decoration: none;
